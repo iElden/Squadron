@@ -1,7 +1,19 @@
 from flask import Flask, abort, render_template, send_from_directory
-from parse_gsheet import get_squadron
+from threading import Thread
+import logging
+import asyncio
 
-mapuches, didons = get_squadron()
+from Squadron import get_squadrons
+from DiscordClient import DiscordClient
+
+logging.basicConfig(level="INFO")
+
+discord_client = DiscordClient()
+loop = asyncio.get_event_loop()
+loop.create_task(discord_client.launch())
+
+mapuches, didons = loop.run_until_complete(get_squadrons(discord_client))
+print("ho")
 squadrons = mapuches + didons
 
 app = Flask(__name__)
@@ -32,6 +44,7 @@ def squadron_view(squad_query):
     if len(squadron) != 1:
         abort(404, f"{len(squadron)} squad with this name found")
     squad = squadron[0]
+    print(squad.players)
     return render_template('squadron.html', mapuches=mapuches, didons=didons, title=squad.name, players=squad.players)
 
 @app.route('/stats')
@@ -42,4 +55,9 @@ def stats_route():
 def history_route():
     return render_template('blank.html', mapuches=mapuches, didons=didons)
 
-app.run("127.0.0.1", 4000)
+class FlaskThread(Thread):
+    def run(self):
+        app.run("127.0.0.1", 4000, use_reloader=False)
+
+FlaskThread().start()
+loop.run_forever()
