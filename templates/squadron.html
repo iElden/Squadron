@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>CIVFR - Squadron</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="/vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+  <script src="/vendor/chart.js/Chart.js"></script>
+  <script src="/js/demo/chart-pie-demo.js"> </script>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    {% include 'sidebar.html' %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4 pt-4">
+            <h1 class="h3 mb-4 text-gray-800">{{title}}</h1>
+          </div>
+
+          <div class="row">
+            {% for player in players %}
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{player}}</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Titulaire</div>
+                      <div class="text-xs font-weight-bold text-gray text-uppercase mb-1">Win: 0 / Lose: 0</div>
+                    </div>
+                    <div class="col-auto">
+                      <img src="/img/wilfrid.png" width="70" height="70"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="row">
+          <!-- DataTales Example -->
+          <div class="col-md-8">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Historique (en brut pour l'instant(pour ça que tout le monde a gagné contre One For All))</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Contre</th>
+                      <th>Map</th>
+                      <th>Résultat</th>
+                      <th>Tour</th>
+                      <th>Type de victoire</th>
+                      <th>Replay(s)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01/01/1970</td>
+                      <td><a href="oneforall">One for All</a></td>
+                      <td>Pangée</td>
+                      <td><div class="text font-weight-bold text-success text-uppercase mb-1">VICTOIRE</div></td>
+                      <td>74</td>
+                      <td>CC</td>
+                      <td><a href="https://twitch.tv/zblblblbl">lien twitch</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Pie Chart -->
+        <div class="col-md-4">
+            <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Win rate</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-pie pt-4 pb-2">
+                  <canvas id="WRPieChart"></canvas>
+                </div>
+                <div class="mt-4 text-center small">
+                  <span class="mr-2">
+                    <i class="fas fa-circle text-success"></i> Victoire
+                  </span>
+                  <span class="mr-2">
+                    <i class="fas fa-circle text-danger"></i> Défaite
+                  </span>
+                  <span class="mr-2">
+                    <i class="fas fa-circle text-gray"></i> Scrap
+                  </span>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/vendor/jquery/jquery.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="/vendor/jquery-easing/jquery.easing.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
