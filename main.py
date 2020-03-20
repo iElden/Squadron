@@ -5,6 +5,8 @@ import asyncio
 
 from Squadron import get_squadrons
 from DiscordClient import DiscordClient
+from Global import Global
+from History import GlobalHistory
 
 logging.basicConfig(level="INFO")
 
@@ -13,8 +15,9 @@ loop = asyncio.get_event_loop()
 loop.create_task(discord_client.launch())
 
 mapuches, didons = loop.run_until_complete(get_squadrons(discord_client))
-print("ho")
 squadrons = mapuches + didons
+histories = loop.run_until_complete(discord_client.get_full_histories())
+full_history = GlobalHistory(sum([i.matchs for i in histories], []), None)
 
 app = Flask(__name__)
 
@@ -44,8 +47,8 @@ def squadron_view(squad_query):
     if len(squadron) != 1:
         abort(404, f"{len(squadron)} squad with this name found")
     squad = squadron[0]
-    print(squad.players)
-    return render_template('squadron.html', mapuches=mapuches, didons=didons, title=squad.name, players=squad.players)
+    return render_template('squadron.html', mapuches=mapuches, didons=didons, title=squad.name, players=squad.players,
+                           history=full_history.get_history_for(squad))
 
 @app.route('/stats')
 def stats_route():
@@ -53,7 +56,7 @@ def stats_route():
 
 @app.route('/history')
 def history_route():
-    return render_template('blank.html', mapuches=mapuches, didons=didons)
+    return render_template('history.html', mapuches=mapuches, didons=didons, histories=histories)
 
 class FlaskThread(Thread):
     def run(self):

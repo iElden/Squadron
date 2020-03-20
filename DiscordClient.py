@@ -1,7 +1,13 @@
 import discord
 import logging
+import asyncio
 from typing import List, Optional
+import re
+
 from Player import Player
+from Match import Match
+from History import GlobalHistory
+from Squadron import Division
 
 CIVFR_ID = 197418659067592708
 DIDON_REPORT = 682916309939519557
@@ -29,9 +35,6 @@ class DiscordClient(discord.Client):
         self.clan_members = self.clan_pmu.members
         self.informations_loaded = True
         logger.info("ready")
-        for role in self.civfr.roles:
-            print(f"{role.id:>20}: {role.name}")
-
 
     async def launch(self, **kwargs):
         with open("private/token") as fd:
@@ -50,3 +53,13 @@ class DiscordClient(discord.Client):
         if member:
             player.fill_informations_with_discord(member)
         return player
+
+    async def get_history_for(self, channel_id):
+        channel = self.get_channel(channel_id)
+        messages = await channel.history().flatten()
+        history = [Match.parse_match(msg) for msg in sorted(messages, key=lambda i:i.created_at) if re.match(r"<@&\d+>\s*vs\s*<@&\d+>", msg.content, re.IGNORECASE)]
+        return [i for i in history if i]
+
+    async def get_full_histories(self):
+        return [GlobalHistory((await self.get_history_for(channel_id)), div)
+                                      for channel_id, div in [(MAPUCHE_REPORT, Division.MAPUCHE), (DIDON_REPORT, Division.DIDON)]]

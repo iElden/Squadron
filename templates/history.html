@@ -48,32 +48,12 @@
           </div>
 
           <div class="row">
-            {% for player in players %}
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{player.name}}</div>
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Titulaire</div>
-                      <div class="text-xs font-weight-bold text-gray text-uppercase mb-1">Win: 0 / Lose: 0</div>
-                    </div>
-                    <div class="col-auto">
-                      <img src={{player.avatar_url}} width="70" height="70" class="rounded-circle"></img>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-
-          <div class="row">
           <!-- DataTales Example -->
-          <div class="col-md-8">
+          {% for history in histories %}
+          <div class="col-md-12">
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Historique (en brut pour l'instant(pour ça que tout le monde a gagné contre One For All))</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Division {{ history.division }} Historique </h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -91,13 +71,13 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% for match in history %}
+                    {% for match in history.matchs %}
                     <tr>
                       <td>{{ match.date }}</td>
                       <td><a href="/squadron/{{match.team_1.squadron.formated_name}}">{{ match.team_1.squadron.name }}</a></td>
                       <td><a href="/squadron/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a></td>
                       <td>{{ match.map }}</td>
-                      <td><div class="text font-weight-bold text-success text-uppercase mb-1">{{ "Team 1 victoiry" if match.team_1.win else "Team 2 victory" }}</div></td>
+                      <td><div class="text font-weight-bold text-{{ 'success' if match.team_1.win else 'danger' }} text-uppercase mb-1">{{ "Team 1 victoiry" if match.team_1.win else "Team 2 victory" }}</div></td>
                       <td>{{match.turn}}</td>
                       <td>{{match.victory_type}}</td>
                       <td>Comming soon</td>
@@ -109,33 +89,7 @@
             </div>
           </div>
           </div>
-
-          <!-- Pie Chart -->
-        <div class="col-md-4">
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Win rate</h6>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                <div class="chart-pie pt-4 pb-2">
-                  <canvas id="WRPieChart"></canvas>
-                </div>
-                <div class="mt-4 text-center small">
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-success"></i> Victoire
-                  </span>
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-danger"></i> Défaite
-                  </span>
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-gray"></i> Scrap
-                  </span>
-                </div>
-              </div>
-            </div>
-        </div>
+          {% endfor %}
 
         </div>
 
