@@ -97,7 +97,7 @@
                       <td><a href="/squadron/{{match.team_1.squadron.formated_name}}">{{ match.team_1.squadron.name }}</a></td>
                       <td><a href="/squadron/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a></td>
                       <td>{{ match.map }}</td>
-                      <td><div class="text font-weight-bold text-success text-uppercase mb-1">{{ "Team 1 victoiry" if match.team_1.win else "Team 2 victory" }}</div></td>
+                      <td><div class="text font-weight-bold text-{{ 'success' if match.team_1.win else 'danger' }} text-uppercase mb-1">{{ "Team 1 victoiry" if match.team_1.win else "Team 2 victory" }}</div></td>
                       <td>{{match.turn}}</td>
                       <td>{{match.victory_type}}</td>
                       <td>Comming soon</td>
