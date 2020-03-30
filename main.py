@@ -48,7 +48,7 @@ def squadron_view(squad_query):
         abort(404, f"{len(squadron)} squad with this name found")
     squad = squadron[0]
     return render_template('squadron.html', mapuches=mapuches, didons=didons, title=squad.name, players=squad.players,
-                           history=full_history.get_history_for(squad))
+                           history=full_history.get_history_for(squad), squadron=squad)
 
 @app.route('/stats')
 def stats_route():

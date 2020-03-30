@@ -70,10 +70,21 @@ class Match:
     def __str__(self):
         return f"{self.team_1} vs {self.team_2}: {self.victory_type} turn {self.turn} on {self.map}"
 
-    def __iter__(self) -> IGTeam:
+    def __iter__(self) -> List[IGTeam]:
         yield self.team_1
         yield self.team_2
         return
+
+    def get_team(self, squadron) -> Optional[IGTeam]:
+        for team in self:
+            if team.squadron == squadron:
+                return team
+        return None
+
+    def get_enemy_team(self, squadron) -> IGTeam:
+        if self.team_1.squadron == squadron:
+            return self.team_2
+        return self.team_1
 
     @classmethod
     def parse_match(cls, message : discord.Message):
