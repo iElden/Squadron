@@ -61,10 +61,11 @@
                   <thead>
                     <tr>
                       <th>Date</th>
+                      <th>Bans</th>
                       <th>Team 1</th>
                       <th>Team 2</th>
                       <th>Map</th>
-                      <th>Résultat</th>
+                      <th>Gagnants</th>
                       <th>Tour</th>
                       <th>Type de victoire</th>
                       <th>Replay(s)</th>
@@ -74,10 +75,39 @@
                     {% for match in history.matchs %}
                     <tr>
                       <td>{{ match.date }}</td>
-                      <td><a href="/squadron/{{match.team_1.squadron.formated_name}}">{{ match.team_1.squadron.name }}</a></td>
-                      <td><a href="/squadron/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a></td>
+                      <td>
+                        {% for i,ban in match.enum_bans() %}
+                          {% if i == (match.bans.__len__() + 1) // 2 %}
+                            <br>
+                          {% endif %}
+                          {% if ban %}
+                            <img src=/img/leader/{{ban.uuname}}.png width="30" height="30" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="30" height="30" class="rounded-circle"></img>
+                          {% endif %}
+                        {% endfor%}
+                      </td>
+                      <td>
+                        <a href="/squadron/{{match.team_1.squadron.formated_name}}">{{ match.team_1.squadron.name }}</a><br>
+                        {% for player in match.team_1.players %}
+                          {% if player.leader %}
+                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
+                          {% endif %}
+                        {% endfor %}
+                      </td>
+                      <td><a href="/squadron/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a><br>
+                        {% for player in match.team_2.players %}
+                          {% if player.leader %}
+                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
+                          {% endif %}
+                        {% endfor %}
+                      </td>
                       <td>{{ match.map }}</td>
-                      <td><div class="text font-weight-bold text-{{ 'success' if match.team_1.win else 'danger' }} text-uppercase mb-1">{{ "Team 1 victoiry" if match.team_1.win else "Team 2 victory" }}</div></td>
+                      <td><div class="text font-weight-bold text-{{ 'success' if match.team_1.win else 'danger' }} text-uppercase mb-1">{{ "Team 1" if match.team_1.win else "Team 2" }}</div></td>
                       <td>{{match.turn}}</td>
                       <td>{{match.victory_type}}</td>
                       <td>Comming soon</td>

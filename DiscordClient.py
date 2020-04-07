@@ -1,13 +1,14 @@
 import discord
 import logging
-import asyncio
-from typing import List, Optional
+from asyncio import sleep
+from typing import List, Optional, Tuple
 import re
 
 from Player import Player
 from Match import Match
 from History import GlobalHistory
-from Squadron import Division
+from Squadron import Division, Squadron
+from Global import Global, Constant
 
 CIVFR_ID = 197418659067592708
 DIDON_REPORT = 682916309939519557
@@ -28,13 +29,18 @@ class DiscordClient(discord.Client):
         self.informations_loaded = False  # type: bool
 
     async def on_ready(self):
+        await self.load()
+        logger.info("ready")
+
+    async def load(self):
         self.civfr = self.get_guild(CIVFR_ID)
         self.clan_pmu = self.civfr.get_channel(CLAN_PMU)
         self.didon_report = self.civfr.get_channel(DIDON_REPORT)
         self.mapuche_report = self.civfr.get_channel(MAPUCHE_REPORT)
         self.clan_members = self.clan_pmu.members
         self.informations_loaded = True
-        logger.info("ready")
+
+        Global.clan_member = self.clan_members
 
     async def launch(self, **kwargs):
         with open("private/token") as fd:
@@ -63,3 +69,17 @@ class DiscordClient(discord.Client):
     async def get_full_histories(self):
         return [GlobalHistory((await self.get_history_for(channel_id)), div)
                                       for channel_id, div in [(MAPUCHE_REPORT, Division.MAPUCHE), (DIDON_REPORT, Division.DIDON)]]
+
+    async def get_squadrons(self) -> Tuple[List[Squadron], List[Squadron]]:
+        logger.info("Waiting for DiscordClient to load")
+        await self.wait_until_ready()
+        while not self.informations_loaded:
+            await sleep(0.1)
+
+        mapuche = [Squadron(Division.MAPUCHE, squad,
+                            [member for member in self.clan_members if squad in member.roles])
+                   for squad in [self.civfr.get_role(i) for i in Constant.MAPUCHE_SQUADS]]
+        didon = [Squadron(Division.DIDON, squad,
+                          [member for member in self.clan_members if squad in member.roles])
+                 for squad in [self.civfr.get_role(i) for i in Constant.DIDON_SQUADS]]
+        return mapuche, didon

@@ -70,7 +70,6 @@
 
           <div class="row">
           <!-- DataTales Example -->
-          <div class="col-md-8">
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Historique</h6>
@@ -81,9 +80,10 @@
                   <thead>
                     <tr>
                       <th>Date</th>
+                      <th>Bans</th>
+                      <th>Compo</th>
                       <th>Contre</th>
                       <th>Map</th>
-                      <th>Résultat</th>
                       <th>Tour</th>
                       <th>Type de victoire</th>
                       <th>Replay(s)</th>
@@ -93,9 +93,45 @@
                     {% for match in history %}
                     <tr>
                       <td>{{ match.date }}</td>
-                      <td><a href="/squadron/{{match.get_enemy_team(squadron).squadron.formated_name}}">{{ match.get_enemy_team(squadron).squadron.name }}</a></td>
+                      <td>
+                        {% for i,ban in match.enum_bans() %}
+                          {% if i == (match.bans.__len__() + 1) // 2 %}
+                            <br>
+                          {% endif %}
+                          {% if ban %}
+                            <img src=/img/leader/{{ban.uuname}}.png width="25" height="25" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="25" height="25" class="rounded-circle"></img>
+                          {% endif %}
+                        {% endfor%}
+                      </td>
+                      <td align=right>
+                        <div class="text font-weight-bold text-{{ 'success' if match.get_team(squadron).win else 'danger' }} text-uppercase mb-1" align="center">{{ "Victoire" if match.get_team(squadron).win else "Défaite" }}</div>
+                        {% for player in match.get_team(squadron).players %}
+                          {{player.name}}
+                          <img src="{{player.avatar_url}}" width="35" height="35" class="rounded-circle"></img>
+                          {% if player.leader %}
+                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
+                          {% endif %}
+                          <br>
+                        {% endfor%}
+                      </td>
+                      <td>
+                        <div class="text font-weight-bold mb-1" align="center">vs <a href="/squadron/{{match.get_enemy_team(squadron).squadron.formated_name}}">{{ match.get_enemy_team(squadron).squadron.name }}</a></div>
+                        {% for player in match.get_enemy_team(squadron).players %}
+                          {% if player.leader %}
+                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
+                          {% endif %}
+                          <img src="{{player.avatar_url}}" width="35" height="35" class="rounded-circle"></img>
+                          {{player.name}}
+                          <br>
+                        {% endfor%}
+                      </td>
                       <td>{{ match.map }}</td>
-                      <td><div class="text font-weight-bold text-{{ 'success' if match.get_team(squadron).win else 'danger' }} text-uppercase mb-1">{{ "Victoire" if match.get_team(squadron).win else "Défaite" }}</div></td>
                       <td>{{match.turn}}</td>
                       <td>{{match.victory_type}}</td>
                       <td>Comming soon</td>
@@ -106,34 +142,6 @@
               </div>
             </div>
           </div>
-          </div>
-
-          <!-- Pie Chart -->
-        <div class="col-md-4">
-            <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Win rate</h6>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                <div class="chart-pie pt-4 pb-2">
-                  <canvas id="WRPieChart"></canvas>
-                </div>
-                <div class="mt-4 text-center small">
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-success"></i> Victoire
-                  </span>
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-danger"></i> Défaite
-                  </span>
-                  <span class="mr-2">
-                    <i class="fas fa-circle text-gray"></i> Scrap
-                  </span>
-                </div>
-              </div>
-            </div>
-        </div>
 
         </div>
 

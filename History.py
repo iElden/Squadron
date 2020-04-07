@@ -9,4 +9,3 @@ class GlobalHistory:
 
     def get_history_for(self, squadron):
         return [match for match in self.matchs if squadron == match.team_1.squadron or squadron == match.team_2.squadron]
-
