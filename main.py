@@ -50,7 +50,7 @@ def stats_route():
 
 @app.route('/history')
 def history_route():
-    return render_template('history.html', mapuches=Global.mapuches, didons=Global.didons, histories=histories)
+    return render_template('history.html', mapuches=Global.mapuches, didons=Global.didons, histories=Global.histories)
 
 class FlaskThread(Thread):
     def run(self):

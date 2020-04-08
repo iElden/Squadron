@@ -12,6 +12,7 @@ class Global:
     discord_client = None
     loop = None
     mapuches = didons = None
+    histories = None
     full_history = None
 
 
@@ -52,5 +53,5 @@ class Global:
         from History import GlobalHistory
         cls.mapuches, cls.didons = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
         cls.squadrons = cls.mapuches + cls.didons
-        histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
-        cls.full_history = GlobalHistory(sum([i.matchs for i in histories], []), None)
+        cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
+        cls.full_history = GlobalHistory(sum([i.matchs for i in cls.histories], []), None)
