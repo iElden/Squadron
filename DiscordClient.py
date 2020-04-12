@@ -32,6 +32,12 @@ class DiscordClient(discord.Client):
         await self.load()
         logger.info("ready")
 
+    async def on_message(self, message : discord.Message):
+        if message.channel in [self.didon_report, self.mapuche_report] and re.match(r"<@&\d+>\s*vs\s*<@&\d+>", message.content, re.IGNORECASE):
+            history = Global.mapuche_history if message.channel == self.mapuche_report else Global.didon_history
+            match = Match.parse_match(message.content)
+            history.register_match(match)
+
     async def load(self):
         self.civfr = self.get_guild(CIVFR_ID)
         self.clan_pmu = self.civfr.get_channel(CLAN_PMU)
@@ -66,7 +72,7 @@ class DiscordClient(discord.Client):
         history = [Match.parse_match(msg) for msg in sorted(messages, key=lambda i:i.created_at) if re.match(r"<@&\d+>\s*vs\s*<@&\d+>", msg.content, re.IGNORECASE)]
         return [i for i in history if i]
 
-    async def get_full_histories(self):
+    async def get_full_histories(self) -> List[GlobalHistory]:
         return [GlobalHistory((await self.get_history_for(channel_id)), div)
                                       for channel_id, div in [(MAPUCHE_REPORT, Division.MAPUCHE), (DIDON_REPORT, Division.DIDON)]]
 

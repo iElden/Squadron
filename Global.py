@@ -12,6 +12,7 @@ class Global:
     discord_client = None
     loop = None
     mapuches = didons = None
+    mapuche_history = didon_history = None
     histories = None
     full_history = None
 
@@ -50,8 +51,13 @@ class Global:
 
     @classmethod
     def reload(cls):
-        from History import GlobalHistory
         cls.mapuches, cls.didons = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
         cls.squadrons = cls.mapuches + cls.didons
         cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
+        cls.mapuche_history, cls.didon_history = cls.histories
+        cls.reload_full_history()
+
+    @classmethod
+    def reload_full_history(cls):
+        from History import GlobalHistory
         cls.full_history = GlobalHistory(sum([i.matchs for i in cls.histories], []), None)
