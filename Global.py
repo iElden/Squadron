@@ -34,10 +34,10 @@ class Global:
     @classmethod
     def get_member_by_name(cls, name):
         for member in cls.clan_member:
-            if name == member.name:
+            if name.lower() == member.name.lower():
                 return member
         for member in cls.clan_member:
-            if name in member.name:
+            if name.lower() in member.name.lower():
                 return member
         return None
     
