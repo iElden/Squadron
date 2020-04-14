@@ -35,7 +35,7 @@ class DiscordClient(discord.Client):
     async def on_message(self, message : discord.Message):
         if message.channel in [self.didon_report, self.mapuche_report] and re.match(r"<@&\d+>\s*vs\s*<@&\d+>", message.content, re.IGNORECASE):
             history = Global.mapuche_history if message.channel == self.mapuche_report else Global.didon_history
-            match = Match.parse_match(message.content)
+            match = Match.parse_match(message)
             history.register_match(match)
 
     async def load(self):
@@ -83,9 +83,9 @@ class DiscordClient(discord.Client):
             await sleep(0.1)
 
         mapuche = [Squadron(Division.MAPUCHE, squad,
-                            [member for member in self.clan_members if squad in member.roles])
+                            [Player(member) for member in self.clan_members if squad in member.roles])
                    for squad in [self.civfr.get_role(i) for i in Constant.MAPUCHE_SQUADS]]
         didon = [Squadron(Division.DIDON, squad,
-                          [member for member in self.clan_members if squad in member.roles])
+                          [Player(member) for member in self.clan_members if squad in member.roles])
                  for squad in [self.civfr.get_role(i) for i in Constant.DIDON_SQUADS]]
         return mapuche, didon

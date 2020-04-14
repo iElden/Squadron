@@ -14,3 +14,7 @@ class GlobalHistory:
     def register_match(self, match):
         self.matchs.append(match)
         Global.Global.reload_full_history()
+
+    def __iter__(self):
+        for match in self.matchs:
+            yield match

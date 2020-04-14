@@ -56,8 +56,31 @@ class Global:
         cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
         cls.mapuche_history, cls.didon_history = cls.histories
         cls.reload_full_history()
+        cls.update_players_stats()
 
     @classmethod
     def reload_full_history(cls):
         from History import GlobalHistory
         cls.full_history = GlobalHistory(sum([i.matchs for i in cls.histories], []), None)
+
+
+    @classmethod
+    def reset_players_stats(cls):
+        for squadron in cls.squadrons:
+            for player in squadron.players:
+                player.stats.reset()
+
+    @classmethod
+    def update_players_stats(cls):
+        cls.reset_players_stats()
+        for history in cls.histories:
+            for match in history:
+                for igteam in match.team_1, match.team_2:
+                    for igplayer in igteam:
+                        player = igteam.squadron.find_player(igplayer)
+                        if player is None:
+                            continue
+                        if igteam.win:
+                            player.stats.win += 1
+                        else:
+                            player.stats.lose += 1

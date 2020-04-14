@@ -73,6 +73,10 @@ class IGTeam:
     def __str__(self):
         return self.squadron.name
 
+    def __iter__(self):
+        for player in self.players:
+            yield player
+
     @classmethod
     def parse_players(cls, txt : str):
         return [IGPlayer.parse_player(i) for i in [j.strip() for j in txt.split('\n')] if i and i != "vs"]
