@@ -25,6 +25,12 @@ class Player:
     def win_ratio(self):
         return f"W: {self.stats.win} / L: {self.stats.lose} ({self.stats.str_win_ratio} %)"
 
+    def to_json(self):
+        return {
+            "discord_id": None if not self.member else self.member.id,
+            "name": self.name
+        }
+
 
 class PlayerStats:
     def __init__(self):

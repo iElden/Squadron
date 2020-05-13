@@ -15,9 +15,11 @@ Global.load()
 
 app = Flask(__name__)
 
+SIDEBAR_KWARGS = {'mapuches': Global.mapuches, 'didons': Global.didons, 'christines': Global.christines}
+
 @app.route('/')
 def hello_world():
-    return render_template('blank.html', mapuches=Global.mapuches, didons=Global.didons)
+    return render_template('blank.html', **SIDEBAR_KWARGS)
 
 @app.route('/js/<path:path>')
 def send_js(path):
@@ -41,16 +43,24 @@ def squadron_view(squad_query):
     if len(squadron) != 1:
         abort(404, f"{len(squadron)} squad with this name found")
     squad = squadron[0]
-    return render_template('squadron.html', mapuches=Global.mapuches, didons=Global.didons, title=squad.name, players=squad.players,
+    return render_template('squadron.html', **SIDEBAR_KWARGS, title=squad.name, players=squad.players,
                            history=Global.full_history.get_history_for(squad), squadron=squad)
 
 @app.route('/stats')
 def stats_route():
-    return render_template('blank.html', mapuches=Global.mapuches, didons=Global.didons)
+    return render_template('blank.html', **SIDEBAR_KWARGS)
 
 @app.route('/history')
 def history_route():
-    return render_template('history.html', mapuches=Global.mapuches, didons=Global.didons, histories=Global.histories)
+    return render_template('history.html', **SIDEBAR_KWARGS, histories=Global.histories)
+
+@app.route("/dump")
+def dump():
+    import json
+    with open("save_squadron_season3.json", 'w') as fd:
+        json.dump({"squadrons": [i.to_json() for i in Global.squadrons],
+                   "matchs": {"mapuche": Global.mapuche_history.to_json(),
+                              "didon": Global.didon_history.to_json()}}, fd, indent=4)
 
 class FlaskThread(Thread):
     def run(self):

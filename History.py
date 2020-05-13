@@ -18,3 +18,6 @@ class GlobalHistory:
     def __iter__(self):
         for match in self.matchs:
             yield match
+
+    def to_json(self):
+        return [i.to_json() for i in self.matchs]

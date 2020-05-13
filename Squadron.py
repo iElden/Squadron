@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 class Division(Enum):
     MAPUCHE = "Mapuche"
     DIDON = "Didon"
+    CHRISTINE = "Christine"
 
 class Squadron:
     def __init__(self, div, role, players):
@@ -38,3 +39,12 @@ class Squadron:
             if player == target_player:
                 return player
         return None
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "formated_name": self.formated_name,
+            "division": self.division.value,
+            "players": [i.to_json() for i in self.players]
+        }

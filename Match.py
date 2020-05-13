@@ -10,7 +10,7 @@ import logging
 
 logger = logging.getLogger("Match")
 
-MATCH_REGEX = re.compile(r"<@&(?P<SquadID1>\d+)>\s*vs\s*<@&(?P<SquadID2>\d+)>\s*\n\s*map.*:\s*(?P<Map>.+)\s*bans?\s*:\s*(?P<Bans>.+?)\s*<@&(?P<SquadReportID1>\d+)> *(?P<VictoryReport1>.+?)? *\n(?P<Team1Query>[\s\S]+?)\s*<@&(?P<SquadReportID2>\d+)> *(?P<VictoryReport2>.+?)? *\n(?P<Team2Query>[\s\S]+)", re.IGNORECASE)
+MATCH_REGEX = re.compile(r"(match)?:?\s*<@&(?P<SquadID1>\d+)>\s*vs\s*<@&(?P<SquadID2>\d+)>\s*.*\n(\s*map.*:\s*(?P<Map>.+))?\s*bans?\s*:\s*(?P<Bans>.+?)\s*<@&(?P<SquadReportID1>\d+)> *(?P<VictoryReport1>.+?)? *\n(?P<Team1Query>[\s\S]+?)\s*<@&(?P<SquadReportID2>\d+)> *(?P<VictoryReport2>.+?)? *\n(?P<Team2Query>[\s\S]+)", re.IGNORECASE)
 BAN_SPLIT_REGEX = re.compile(r"(?:\s+et\s+|[,\s]+)(?!\()", re.IGNORECASE)
 VICTORY_TURN = re.compile(r"(?:tours?|t)?\s*(\d+)", re.IGNORECASE)
 MENTION_REGEX = re.compile(r"<@!?(\d+)>")
@@ -63,6 +63,9 @@ class IGPlayer(Player):
             logger.error(f"Can't parse player report line, found more than 1 mention in line \"{txt}\"")
             return IGPlayer(None, None)
 
+    def to_json(self):
+        return {**Player.to_json(self), "leader": self.leader and self.leader.uuname}
+
 
 class IGTeam:
     def __init__(self, squadron, players, win):
@@ -81,6 +84,9 @@ class IGTeam:
     def parse_players(cls, txt : str):
         return [IGPlayer.parse_player(i) for i in [j.strip() for j in txt.split('\n')] if i and i != "vs"]
 
+    def to_json(self):
+        return {"squadron": self.squadron.formated_name, "win": self.win, "players": [i.to_json() for i in self.players]}
+
 class Match:
     def __init__(self, team_1, team_2, victory_type, turn, game_map, bans, date):
         self.team_1 : IGTeam = team_1
@@ -91,6 +97,14 @@ class Match:
         self.bans : List[...] = bans
         self._date : datetime = date - timedelta(hours=5)
         self.date : str = self._date.strftime("%d/%m/%Y")
+
+    def to_json(self):
+        return {"victory_type": self.victory_type,
+                "turn": self.turn,
+                "map": self.map,
+                "date": self.date,
+                "bans": [(i and i.uuname) for i in self.bans],
+                "teams": [self.team_1.to_json(), self.team_2.to_json()]}
 
     def __str__(self):
         return f"{self.team_1} vs {self.team_2}: {self.victory_type} turn {self.turn} on {self.map}"
@@ -124,6 +138,9 @@ class Match:
             return None
         squad1 = Global.get_squadron_by_id(int(match["SquadReportID1"]))
         squad2 = Global.get_squadron_by_id(int(match["SquadReportID2"]))
+        if not squad1 or not squad2:
+            logger.error("Missing squadron in match report")
+            return None
         if match["VictoryReport1"] and match["VictoryReport2"]:
             logger.error("2 Victory report detected, abort parsing")
             return None

@@ -1,9 +1,12 @@
 import asyncio
 
 class Constant:
-    MAPUCHE_SQUADS = [652144868109582357, 682245125656805459, 682247440346513430, 682917973287239693,
-                      682919453788471306]
-    DIDON_SQUADS = [682245427722190881, 682245588389200108, 682245596324823053, 682920185547587594, 652144537535512586]
+    MAPUCHE_SQUADS = [682245125656805459, 682919453788471306, 682245596324823053,
+                      652143977260122125, 708475861606596612, 708475862860824598]
+    DIDON_SQUADS = [708475004744106024, 708475012624941107, 708475862693052438, 708475854941847665,
+                    708475858486034474, 708475860348567612, 682920185547587594]
+    CHRISTINE_SQUADS = [708475861292286024, 708475865314361394, 708475865494978612,
+                        708475021621723137, 708475864110596107, 708475864115052635]
 
 class Global:
     squadrons = None
@@ -11,8 +14,8 @@ class Global:
     clan_member = None
     discord_client = None
     loop = None
-    mapuches = didons = None
-    mapuche_history = didon_history = None
+    mapuches = didons = christines = None
+    mapuche_history = didon_history = christine_history = None
     histories = None
     full_history = None
 
@@ -51,10 +54,10 @@ class Global:
 
     @classmethod
     def reload(cls):
-        cls.mapuches, cls.didons = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
-        cls.squadrons = cls.mapuches + cls.didons
+        cls.mapuches, cls.didons, cls.christines = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
+        cls.squadrons = cls.mapuches + cls.didons + cls.christines
         cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
-        cls.mapuche_history, cls.didon_history = cls.histories
+        cls.mapuche_history, cls.didon_history, cls.christine_history = cls.histories
         cls.reload_full_history()
         cls.update_players_stats()
 

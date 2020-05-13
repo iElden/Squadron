@@ -59,6 +59,21 @@
         </div>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          <img src="/img/leader/suede.png" width="30" height="30"></img>
+          <span>Division Christine</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Division Christine:</h6>
+            {% for christine in christines %}
+                <a class="collapse-item" href="/squadron/{{ christine.formated_name }}">{{ christine.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
