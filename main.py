@@ -1,4 +1,4 @@
-from flask import Flask, abort, render_template, send_from_directory
+from flask import Flask, abort, render_template, send_from_directory, redirect
 from threading import Thread
 import logging
 import asyncio
@@ -18,8 +18,8 @@ app = Flask(__name__)
 SIDEBAR_KWARGS = {'mapuches': Global.mapuches, 'didons': Global.didons, 'christines': Global.christines}
 
 @app.route('/')
-def hello_world():
-    return render_template('blank.html', **SIDEBAR_KWARGS)
+def homepage():
+    return redirect('/history')
 
 @app.route('/js/<path:path>')
 def send_js(path):
@@ -53,14 +53,6 @@ def stats_route():
 @app.route('/history')
 def history_route():
     return render_template('history.html', **SIDEBAR_KWARGS, histories=Global.histories)
-
-@app.route("/dump")
-def dump():
-    import json
-    with open("save_squadron_season3.json", 'w') as fd:
-        json.dump({"squadrons": [i.to_json() for i in Global.squadrons],
-                   "matchs": {"mapuche": Global.mapuche_history.to_json(),
-                              "didon": Global.didon_history.to_json()}}, fd, indent=4)
 
 class FlaskThread(Thread):
     def run(self):
