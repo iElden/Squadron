@@ -97,7 +97,7 @@
                           {% endif %}
                         {% endfor %}
                       </td>
-                      <td><a href="/oldseason/{{season}}/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a><br>
+                      <td><a href="/oldseason/{{season}}/squadron/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a><br>
                         {% for player in match.team_2.players %}
                           {% if player.leader %}
                             <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
