@@ -1,4 +1,5 @@
 import discord
+from Global import Global
 from typing import Optional
 
 class Player:
@@ -30,6 +31,12 @@ class Player:
             "discord_id": None if not self.member else self.member.id,
             "name": self.name
         }
+
+    @classmethod
+    def from_json(cls, js):
+        member = Global.discord_client.get_member(js['discord_id'])
+        return cls(member if member else js['name'])
+
 
 
 class PlayerStats:

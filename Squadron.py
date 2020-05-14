@@ -48,3 +48,11 @@ class Squadron:
             "division": self.division.value,
             "players": [i.to_json() for i in self.players]
         }
+
+class OldSquadron(Squadron):
+    def __init__(self, js):
+        self.division = Division(js['division'])
+        self.id = js['id']
+        self.name = js['name']
+        self.formated_name = js['formated_name']
+        self.players = [Player.from_json(i) for i in js['players']]

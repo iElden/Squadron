@@ -19,5 +19,12 @@ class GlobalHistory:
         for match in self.matchs:
             yield match
 
+    def __add__(self, other):
+        return GlobalHistory(self.matchs + other.matchs, None)
+
     def to_json(self):
         return [i.to_json() for i in self.matchs]
+
+    @classmethod
+    def from_json(cls, js, division, old_squadrons):
+        return cls([Match.from_json(i, old_squadrons) for i in js], division)

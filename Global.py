@@ -7,6 +7,7 @@ class Constant:
                     708475858486034474, 708475860348567612, 682920185547587594]
     CHRISTINE_SQUADS = [708475861292286024, 708475865314361394, 708475865494978612,
                         708475021621723137, 708475864110596107, 708475864115052635]
+    CURRENT_SEASON = "4"
 
 class Global:
     squadrons = None
@@ -18,7 +19,7 @@ class Global:
     mapuche_history = didon_history = christine_history = None
     histories = None
     full_history = None
-
+    old_season = {}
 
     @classmethod
     def get_squadron_by_id(cls, target):
@@ -54,10 +55,12 @@ class Global:
 
     @classmethod
     def reload(cls):
+        import OldSeason
         cls.mapuches, cls.didons, cls.christines = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
         cls.squadrons = cls.mapuches + cls.didons + cls.christines
         cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
         cls.mapuche_history, cls.didon_history, cls.christine_history = cls.histories
+        cls.old_season = {"3": OldSeason.OldSeason.from_json("save_squadron_season3.json")}
         cls.reload_full_history()
         cls.update_players_stats()
 

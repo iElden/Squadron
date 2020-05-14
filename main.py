@@ -4,7 +4,7 @@ import logging
 import asyncio
 
 from DiscordClient import DiscordClient
-from Global import Global
+from Global import Global, Constant
 from History import GlobalHistory
 from Leaders import load_leaders
 
@@ -43,8 +43,27 @@ def squadron_view(squad_query):
     if len(squadron) != 1:
         abort(404, f"{len(squadron)} squad with this name found")
     squad = squadron[0]
-    return render_template('squadron.html', **SIDEBAR_KWARGS, title=squad.name, players=squad.players,
+    return render_template('squadron.html', **SIDEBAR_KWARGS, title=squad.name,
                            history=Global.full_history.get_history_for(squad), squadron=squad)
+
+@app.route('/oldseason/<season_query>')
+def old_season_view(season_query):
+    oldseason = Global.old_season.get(season_query)
+    if not oldseason:
+        abort(404, f"Season \"{season_query}\" was not found")
+    return render_template('oldseason.html', **SIDEBAR_KWARGS, season=season_query, data=oldseason)
+
+@app.route('/oldseason/<season_query>/squadron/<squad_query>')
+def oldsquadron_view(season_query, squad_query):
+    oldseason = Global.old_season.get(season_query)
+    if not oldseason:
+        abort(404, f"Season \"{season_query}\" was not found")
+    squadron = [i for i in oldseason.squadrons if i.formated_name == squad_query]
+    if len(squadron) != 1:
+        abort(404, f"{len(squadron)} squad with this name found")
+    squad = squadron[0]
+    return render_template('squadron.html', **SIDEBAR_KWARGS, title=f"{squad.name} (Saison {season_query})",
+                           history=oldseason.get_history_for(squad), squadron=squad)
 
 @app.route('/stats')
 def stats_route():
@@ -52,7 +71,7 @@ def stats_route():
 
 @app.route('/history')
 def history_route():
-    return render_template('history.html', **SIDEBAR_KWARGS, histories=Global.histories)
+    return render_template('history.html', **SIDEBAR_KWARGS, histories=Global.histories, season=Constant.CURRENT_SEASON)
 
 class FlaskThread(Thread):
     def run(self):

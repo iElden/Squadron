@@ -66,6 +66,13 @@ class IGPlayer(Player):
     def to_json(self):
         return {**Player.to_json(self), "leader": self.leader and self.leader.uuname}
 
+    @classmethod
+    def from_json(cls, js):
+        member = Global.discord_client.get_member(js['discord_id'])
+        if not member:
+            member = js['name']
+        return cls(member, Global.leaders.get_leader_named(js['leader']))
+
 
 class IGTeam:
     def __init__(self, squadron, players, win):
@@ -86,6 +93,14 @@ class IGTeam:
 
     def to_json(self):
         return {"squadron": self.squadron.formated_name, "win": self.win, "players": [i.to_json() for i in self.players]}
+
+    @classmethod
+    def from_json(cls, js, old_squadrons):
+        r = None
+        for i in old_squadrons:
+            if i.formated_name == js['squadron']:
+                r = i
+        return cls(r, [IGPlayer.from_json(i) for i in js['players']], js['win'])
 
 class Match:
     def __init__(self, team_1, team_2, victory_type, turn, game_map, bans, date):
@@ -170,3 +185,11 @@ class Match:
                 if player.name == name:
                     return team
         return None
+
+    @classmethod
+    def from_json(cls, js, old_squadrons):
+        return cls(*(IGTeam.from_json(i, old_squadrons) for i in js['teams']),
+                   VictoryType(js['victory_type']), js['turn'], js['map'],
+                   [(i and Global.leaders.get_leader_named(i)) for i in js['bans']],
+                   datetime(*(int(i) for i in js['date'].split('/')[::-1]))
+                   )

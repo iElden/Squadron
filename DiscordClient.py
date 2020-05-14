@@ -94,3 +94,6 @@ class DiscordClient(discord.Client):
                           [Player(member) for member in self.clan_members if squad in member.roles])
                  for squad in [self.civfr.get_role(i) for i in Constant.CHRISTINE_SQUADS]]
         return mapuche, didon, christine
+
+    def get_member(self, member_id):
+        return discord.utils.find(lambda i: i.id == member_id, self.clan_members)

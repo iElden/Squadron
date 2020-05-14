@@ -44,35 +44,16 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4 pt-4">
-            <h1 class="h3 mb-4 text-gray-800">{{title}}</h1>
-          </div>
-
-          <div class="row">
-            {% for player in squadron.players %}
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{player.name}}</div>
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Titulaire</div>
-                      <div class="text-xs font-weight-bold text-gray text-uppercase mb-1">{{player.win_ratio}}</div>
-                    </div>
-                    <div class="col-auto">
-                      <img src={{player.avatar_url}} width="70" height="70" class="rounded-circle"></img>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
+            <h1 class="h3 mb-4 text-gray-800">Archive - Saison {{season}}</h1>
           </div>
 
           <div class="row">
           <!-- DataTales Example -->
+          {% for history in data.histories %}
+          <div class="col-md-12">
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Historique</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Division {{ history.division.value }} Historique </h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -81,16 +62,17 @@
                     <tr>
                       <th>Date</th>
                       <th>Bans</th>
-                      <th>Compo</th>
-                      <th>Contre</th>
+                      <th>Team 1</th>
+                      <th>Team 2</th>
                       <th>Map</th>
+                      <th>Gagnants</th>
                       <th>Tour</th>
                       <th>Type de victoire</th>
                       <th>Replay(s)</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {% for match in history %}
+                    {% for match in history.matchs %}
                     <tr>
                       <td>{{ match.date }}</td>
                       <td>
@@ -99,39 +81,33 @@
                             <br>
                           {% endif %}
                           {% if ban %}
-                            <img src=/img/leader/{{ban.uuname}}.png width="25" height="25" class="rounded-circle"></img>
+                            <img src=/img/leader/{{ban.uuname}}.png width="30" height="30" class="rounded-circle"></img>
                           {% else %}
-                            <img src=/img/unknown.png width="25" height="25" class="rounded-circle"></img>
+                            <img src=/img/unknown.png width="30" height="30" class="rounded-circle"></img>
                           {% endif %}
-                        {% endfor%}
-                      </td>
-                      <td align=right>
-                        <div class="text font-weight-bold text-{{ 'success' if match.get_team(squadron).win else 'danger' }} text-uppercase mb-1" align="center">{{ "Victoire" if match.get_team(squadron).win else "Défaite" }}</div>
-                        {% for player in match.get_team(squadron).players %}
-                          {{player.name}}
-                          <img src="{{player.avatar_url}}" width="35" height="35" class="rounded-circle"></img>
-                          {% if player.leader %}
-                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
-                          {% else %}
-                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
-                          {% endif %}
-                          <br>
                         {% endfor%}
                       </td>
                       <td>
-                        <div class="text font-weight-bold mb-1" align="center">vs <a href="{{match.get_enemy_team(squadron).squadron.formated_name}}">{{ match.get_enemy_team(squadron).squadron.name }}</a></div>
-                        {% for player in match.get_enemy_team(squadron).players %}
+                        <a href="/oldseason/{{season}}/squadron/{{match.team_1.squadron.formated_name}}">{{ match.team_1.squadron.name }}</a><br>
+                        {% for player in match.team_1.players %}
                           {% if player.leader %}
                             <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
                           {% else %}
                             <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
                           {% endif %}
-                          <img src="{{player.avatar_url}}" width="35" height="35" class="rounded-circle"></img>
-                          {{player.name}}
-                          <br>
-                        {% endfor%}
+                        {% endfor %}
+                      </td>
+                      <td><a href="/oldseason/{{season}}/{{match.team_2.squadron.formated_name}}">{{ match.team_2.squadron.name }}</a><br>
+                        {% for player in match.team_2.players %}
+                          {% if player.leader %}
+                            <img src=/img/leader/{{player.leader.uuname}}.png width="40" height="40" class="rounded-circle"></img>
+                          {% else %}
+                            <img src=/img/unknown.png width="40" height="40" class="rounded-circle"></img>
+                          {% endif %}
+                        {% endfor %}
                       </td>
                       <td>{{ match.map }}</td>
+                      <td><div class="text font-weight-bold text-{{ 'success' if match.team_1.win else 'danger' }} text-uppercase mb-1">{{ "Team 1" if match.team_1.win else "Team 2" }}</div></td>
                       <td>{{match.turn}}</td>
                       <td>{{match.victory_type}}</td>
                       <td>Comming soon</td>
@@ -142,6 +118,8 @@
               </div>
             </div>
           </div>
+          </div>
+          {% endfor %}
 
         </div>
 
