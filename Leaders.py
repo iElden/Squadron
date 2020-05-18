@@ -1,6 +1,8 @@
 import csv
-
+import re
 from Global import Global
+
+NON_WORD = re.compile(r"[^\wÀ-ú]+")
 
 class Leaders:
     def __init__(self, leaders):
@@ -13,9 +15,19 @@ class Leaders:
         for i in self.leaders:
             yield i
 
-    def get_leader_named(self, name):
+    def _get_leader_named(self, name):
         for leader in self:
             if leader == name:
+                return leader
+        return None
+
+    def get_leader_named(self, name):
+        leader = self._get_leader_named(name)
+        if leader:
+            return leader
+        for i in NON_WORD.split(name):
+            leader = self._get_leader_named(i)
+            if leader:
                 return leader
         return None
 
