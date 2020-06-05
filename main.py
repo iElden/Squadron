@@ -17,6 +17,14 @@ app = Flask(__name__)
 
 SIDEBAR_KWARGS = {'mapuches': Global.mapuches, 'didons': Global.didons, 'christines': Global.christines}
 
+async def cron():
+    while True:
+        await asyncio.sleep(3600)
+        Global.reload()
+
+
+asyncio.ensure_future(cron())
+
 @app.route('/')
 def homepage():
     return redirect('/history')
@@ -68,6 +76,35 @@ def oldsquadron_view(season_query, squad_query):
 @app.route('/stats')
 def stats_route():
     return render_template('blank.html', **SIDEBAR_KWARGS)
+
+"""
+@app.route('/dump')
+def tmp_dump():
+    oldSeason = Global.old_season['3']
+    for globalHistory in oldSeason.histories:
+        d = {}
+        for leader in Global.leaders:
+            d[leader.uuname] = {"play": 0, "win": 0, "ban": 0}
+        i = 0
+        for match in globalHistory.matchs:
+            i += 1
+            for igTeam in match:
+                for igPlayer in igTeam:
+                    if not igPlayer.leader:
+                        continue
+                    d[igPlayer.leader.uuname]["play"] += 1
+                    d[igPlayer.leader.uuname]["win"] += igTeam.win
+            for ban in match.bans:
+                if not ban:
+                    continue
+                d[ban.uuname]["ban"] += 1
+        with open(f"tmp_{globalHistory.division.value}_3.csv", 'w') as fd:
+            t = 'total_match,' + str(i)
+            t += 'leader,play,ban,win\n' + '\n'.join('{0},{1[play]},{1[ban]},{1[win]}'.format(k, v) for k, v in d.items())
+            fd.write(t)
+
+    return "done"
+"""
 
 @app.route('/history')
 def history_route():

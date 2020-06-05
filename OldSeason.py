@@ -1,11 +1,13 @@
 import json
+from typing import List
+
 from Squadron import OldSquadron, Division
 from History import GlobalHistory
 
 class OldSeason:
     def __init__(self, squadrons, histories):
         self.squadrons = squadrons
-        self.histories = histories
+        self.histories = histories  # type: List[GlobalHistory]
         self.update_players_stats()
 
     @classmethod
