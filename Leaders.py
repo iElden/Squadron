@@ -22,6 +22,8 @@ class Leaders:
         return None
 
     def get_leader_named(self, name):
+        if name is None:
+            return None
         leader = self._get_leader_named(name)
         if leader:
             return leader

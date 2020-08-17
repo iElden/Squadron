@@ -20,7 +20,10 @@ class GlobalHistory:
             yield match
 
     def __add__(self, other):
-        return GlobalHistory(self.matchs + other.matchs, None)
+        return GlobalHistory(self.matchs + other.matchs, self.division or other.division)
+
+    def __bool__(self):
+        return bool(self.matchs)
 
     def to_json(self):
         return [i.to_json() for i in self.matchs]

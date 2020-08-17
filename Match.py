@@ -10,8 +10,10 @@ import logging
 
 logger = logging.getLogger("Match")
 
-MATCH_REGEX = re.compile(r"(match)?:?\s*<@&(?P<SquadID1>\d+)>\s*vs\s*<@&(?P<SquadID2>\d+)>\s*.*\n(\s*map.*:\s*(?P<Map>.+))?\s*bans?\s*:\s*(?P<Bans>.+?)\s*<@&(?P<SquadReportID1>\d+)> *(?P<VictoryReport1>.+?)? *\n(?P<Team1Query>[\s\S]+?)\s*<@&(?P<SquadReportID2>\d+)> *(?P<VictoryReport2>.+?)? *\n(?P<Team2Query>[\s\S]+)", re.IGNORECASE)
-BAN_SPLIT_REGEX = re.compile(r"(?:\s+et\s+|[,\s]+)(?!\()", re.IGNORECASE)
+MATCH_REGEX = re.compile(
+    r".*?<@&(?P<SquadID1>\d+)>\s*vs\s*<@&(?P<SquadID2>\d+)>.*?\n(\s*map.*?:\s*(?P<Map>[^\n]+))?\s*(?:bans?\s*:?\s*(?P<Bans>[^\n]+))?\s*<@&(?P<SquadReportID1>\d+)>[^\w\n]*(?P<VictoryReport1>\w[^\n]+?)? *\n(?P<Team1Query>[\s\S]+?)\s*<@&(?P<SquadReportID2>\d+)>[^\w\n]*(?P<VictoryReport2>\w[^\n]+?)? *\n(?P<Team2Query>[\s\S]+)",
+    re.IGNORECASE | re.DOTALL)
+BAN_SPLIT_REGEX = re.compile(r"(?:\s+et\s+|[^\w?!(]+)(?!\()", re.IGNORECASE)
 VICTORY_TURN = re.compile(r"(?:tours?|t)?\s*(\d+)", re.IGNORECASE)
 MENTION_REGEX = re.compile(r"<@!?(\d+)>")
 LINE_PREFIX = re.compile(r"^([ -]*)")
@@ -103,7 +105,8 @@ class IGTeam:
         return cls(r, [IGPlayer.from_json(i) for i in js['players']], js['win'])
 
 class Match:
-    def __init__(self, team_1, team_2, victory_type, turn, game_map, bans, date):
+    def __init__(self, team_1, team_2, match_id, victory_type, turn, game_map, bans, date):
+        self.id = match_id
         self.team_1 : IGTeam = team_1
         self.team_2 : IGTeam = team_2
         self.victory_type : str = victory_type.value
@@ -114,7 +117,8 @@ class Match:
         self.date : str = self._date.strftime("%d/%m/%Y")
 
     def to_json(self):
-        return {"victory_type": self.victory_type,
+        return {"id": self.id,
+                "victory_type": self.victory_type,
                 "turn": self.turn,
                 "map": self.map,
                 "date": self.date,
@@ -160,15 +164,23 @@ class Match:
             logger.error("2 Victory report detected, abort parsing")
             return None
         team_1_win = bool(match["VictoryReport1"])
-        bans = [Global.leaders.get_leader_named(i) for i in BAN_SPLIT_REGEX.split(match["Bans"])]
+        if match["Bans"]:
+            bans = [Global.leaders.get_leader_named(i) for i in BAN_SPLIT_REGEX.split(match["Bans"]) if i]
+        else:
+            bans = []
         victory_report = match["VictoryReport1"] or match["VictoryReport2"]
-        victory_type = VictoryType.get_from_query(victory_report)
-        victory_turn_match = VICTORY_TURN.findall(victory_report)
-        victory_turn = int(victory_turn_match[0]) if victory_turn_match else None
+        if victory_report:
+            victory_type = VictoryType.get_from_query(victory_report)
+            victory_turn_match = VICTORY_TURN.findall(victory_report)
+            victory_turn = int(victory_turn_match[0]) if victory_turn_match else None
+        else:
+            logger.warning("0 Victory report detected, abort parsing. Message was :\n" + message.content)
+            victory_type = VictoryType.UNKNOWN
+            victory_turn = None
         return cls(
             IGTeam(squad1, IGTeam.parse_players(match["Team1Query"]), team_1_win),
             IGTeam(squad2, IGTeam.parse_players(match["Team2Query"]), not team_1_win),
-            victory_type, victory_turn, match["Map"], bans, message.created_at)
+            message.id, victory_type, victory_turn, match["Map"], bans, message.created_at)
 
     def get_player(self, target) -> Optional[IGPlayer]:
         name = target.name if isinstance(target, Player) else target
@@ -189,7 +201,7 @@ class Match:
     @classmethod
     def from_json(cls, js, old_squadrons):
         return cls(*(IGTeam.from_json(i, old_squadrons) for i in js['teams']),
-                   VictoryType(js['victory_type']), js['turn'], js['map'],
+                   js.get('id', None), VictoryType(js['victory_type']), js['turn'], js['map'],
                    [(i and Global.leaders.get_leader_named(i)) for i in js['bans']],
                    datetime(*(int(i) for i in js['date'].split('/')[::-1]))
                    )

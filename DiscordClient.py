@@ -68,14 +68,16 @@ class DiscordClient(discord.Client):
             player.fill_informations_with_discord(member)
         return player
 
-    async def get_history_for(self, channel_id):
+    async def get_history_for(self, channel_id, *, ignore_matchs_ids):
         channel = self.get_channel(channel_id)
         messages = await channel.history().flatten()
-        history = [Match.parse_match(msg) for msg in sorted(messages, key=lambda i:i.created_at) if re.search(r"<@&\d+>\s*vs\s*<@&\d+>", msg.content, re.IGNORECASE)]
+        history = [Match.parse_match(msg) for msg in sorted(messages, key=lambda i:i.created_at) if
+                       msg.id not in ignore_matchs_ids and re.search(r"<@&\d+>\s*vs\s*<@&\d+>", msg.content, re.IGNORECASE)]
         return [i for i in history if i]
 
-    async def get_full_histories(self) -> List[GlobalHistory]:
-        return [GlobalHistory((await self.get_history_for(channel_id)), div)
+    async def get_full_histories(self, *, ignore_matchs_ids : List[int]) -> List[GlobalHistory]:
+        print(ignore_matchs_ids)
+        return [GlobalHistory((await self.get_history_for(channel_id, ignore_matchs_ids=ignore_matchs_ids)), div)
                                       for channel_id, div in [(MAPUCHE_REPORT, Division.MAPUCHE), (DIDON_REPORT, Division.DIDON), (CHRISTINE_REPORT, Division.CHRISTINE)]]
 
     async def get_squadrons(self) -> Tuple[List[Squadron], List[Squadron], List[Squadron]]:

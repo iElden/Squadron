@@ -1,4 +1,8 @@
 import asyncio
+import json
+from typing import Tuple
+from shutil import copyfile
+from datetime import datetime
 
 class Constant:
     MAPUCHE_SQUADS = [682245125656805459, 682919453788471306, 682245596324823053,
@@ -19,6 +23,7 @@ class Global:
     mapuche_history = didon_history = christine_history = None
     histories = None
     full_history = None
+    ignore_match = []
     old_season = {}
 
     @classmethod
@@ -58,7 +63,14 @@ class Global:
         import OldSeason
         cls.mapuches, cls.didons, cls.christines = cls.loop.run_until_complete(cls.discord_client.get_squadrons())
         cls.squadrons = cls.mapuches + cls.didons + cls.christines
-        cls.histories = cls.loop.run_until_complete(cls.discord_client.get_full_histories())
+        # TODO: Déspaghettisifier tout ça !
+        cls.histories, cls.ignore_match = cls.load_histories_from_json()
+        loaded_histories = cls.loop.run_until_complete(
+            cls.discord_client.get_full_histories(ignore_matchs_ids=sum([[match.id for match in history] for history in cls.histories], []))
+        )
+        if any(loaded_histories):
+            cls.histories = [sh + lh for sh, lh in zip(cls.histories, loaded_histories)]
+            cls.save_histories_to_json()
         cls.mapuche_history, cls.didon_history, cls.christine_history = cls.histories
         cls.old_season = {"3": OldSeason.OldSeason.from_json("save_squadron_season3.json")}
         cls.reload_full_history()
@@ -69,6 +81,21 @@ class Global:
         from History import GlobalHistory
         cls.full_history = GlobalHistory(sum([i.matchs for i in cls.histories], []), None)
 
+
+    @classmethod
+    def load_histories_from_json(cls) -> Tuple[list, list]:
+        from History import GlobalHistory
+        from Squadron import Division
+        with open("current_season.json") as fd:
+            js = json.load(fd)
+        return [GlobalHistory.from_json(histo, Division(div), cls.squadrons)
+                for div, histo in js['histories'].items()], js['ignore_ids']
+
+    @classmethod
+    def save_histories_to_json(cls):
+        copyfile("current_season.json", f"backup_json/{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.json")
+        with open("current_season.json", 'w') as fd:
+            json.dump({'histories': {i.division.value: i.to_json() for i in cls.histories}, 'ignore_ids': cls.ignore_match}, fd, indent=4)
 
     @classmethod
     def reset_players_stats(cls):
