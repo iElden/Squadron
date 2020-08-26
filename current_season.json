@@ -140,7 +140,7 @@
                 ]
             },
             {
-                "id": 711364066907783288,
+                "id": 710980727784603688,
                 "victory_type": "Culturelle",
                 "turn": 117,
                 "map": null,
@@ -149,13 +149,13 @@
                     "rome",
                     "coree",
                     "mali",
-                    "mapuches",
+                    "mapuche",
                     "phenicie",
                     "perse"
                 ],
                 "teams": [
                     {
-                        "squadron": "",
+                        "squadron": "ragnarök",
                         "win": true,
                         "players": [
                             {
@@ -164,45 +164,45 @@
                                 "leader": "gorgo"
                             },
                             {
-                                "discord_id": 549254188522012690,
-                                "name": "Abel_brimi",
+                                "discord_id": 363333552286334996,
+                                "name": "tuiguillunt",
+                                "leader": "cree"
+                            },
+                            {
+                                "discord_id": 423149190185615371,
+                                "name": "Titiits",
+                                "leader": "teddyroughrider"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
                                 "leader": "japon"
-                            },
-                            {
-                                "discord_id": 225969044182794240,
-                                "name": "DeluxePhilippe",
-                                "leader": "macedoine"
-                            },
-                            {
-                                "discord_id": 249887271166279681,
-                                "name": "(CivFR) Omegaia",
-                                "leader": "perse"
                             }
                         ]
                     },
                     {
-                        "squadron": "mvm",
+                        "squadron": "pyramid",
                         "win": false,
                         "players": [
                             {
-                                "discord_id": 153963235345825802,
-                                "name": "Batoudoo",
-                                "leader": "scythie"
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "victoria"
                             },
                             {
-                                "discord_id": 233664918056992768,
-                                "name": "Yllark",
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
                                 "leader": "france"
                             },
                             {
-                                "discord_id": 436574185716973579,
-                                "name": "Spriggan",
-                                "leader": "cris"
+                                "discord_id": 282940923053080579,
+                                "name": "Arketip",
+                                "leader": "pericles"
                             },
                             {
-                                "discord_id": 137645419952865280,
-                                "name": "Damori",
-                                "leader": "khmer"
+                                "discord_id": 143088067337650176,
+                                "name": "ChucK",
+                                "leader": "egypte"
                             }
                         ]
                     }
@@ -240,7 +240,7 @@
                             {
                                 "discord_id": 111335315238641664,
                                 "name": "(CivFR) Malm",
-                                "leader": null
+                                "leader": "angleterreeleonore"
                             },
                             {
                                 "discord_id": 267990341418745856,
@@ -304,7 +304,7 @@
                             {
                                 "discord_id": 168480406285451266,
                                 "name": "Softstyle",
-                                "leader": null
+                                "leader": "angleterreeleonore"
                             },
                             {
                                 "discord_id": 228420628665991169,
@@ -341,6 +341,282 @@
                                 "discord_id": 238369237092007947,
                                 "name": "Sephi",
                                 "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 717511960526192682,
+                "victory_type": "Diplomatique",
+                "turn": 117,
+                "map": null,
+                "date": "03/06/2020",
+                "bans": [
+                    "rome",
+                    "russie",
+                    "mapuches",
+                    "perse",
+                    "mali",
+                    "teddyroughrider"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ragnarök",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 423149190185615371,
+                                "name": "Titiits",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 610089739462377472,
+                                "name": "Larzac",
+                                "leader": "gorgo"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "phenicie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "babayetu",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": "egypte"
+                            },
+                            {
+                                "discord_id": 95219918596747264,
+                                "name": "Guy",
+                                "leader": "ecosse"
+                            },
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "azteque"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718393242898661437,
+                "victory_type": "Diplomatique",
+                "turn": 135,
+                "map": null,
+                "date": "05/06/2020",
+                "bans": [
+                    "france",
+                    "mali",
+                    "rome",
+                    "egypte",
+                    "phenicie",
+                    "mapuche"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 282940923053080579,
+                                "name": "Arketip",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "maya"
+                            },
+                            {
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "pericles"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ulysse",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 183282110902173698,
+                                "name": "dISTORIA",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "perse"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718595803803025418,
+                "victory_type": "Concédée",
+                "turn": 80,
+                "map": null,
+                "date": "06/06/2020",
+                "bans": [
+                    "mapuches",
+                    "mali",
+                    "phenicie",
+                    "rome",
+                    "norvege",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ragnarök",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 343457699637362728,
+                                "name": "Connavar",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 363333552286334996,
+                                "name": "tuiguillunt",
+                                "leader": "angleterreeleonore"
+                            },
+                            {
+                                "discord_id": 628947606617456649,
+                                "name": "RaySFX01",
+                                "leader": "pericles"
+                            },
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "cree"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 153963235345825802,
+                                "name": "Batoudoo",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 137645419952865280,
+                                "name": "Damori",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 274229647963586571,
+                                "name": "Shino",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "indonesie"
+                            }
+                        ]
+                    }
+                ]
+            },
+                        {
+                "id": 721197092013604934,
+                "victory_type": "Culturelle",
+                "turn": 145,
+                "map": null,
+                "date": "13/06/2020",
+                "bans": [
+                    "mali",
+                    "rome",
+                    "maya",
+                    "norvege",
+                    "phenicie",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ragnarök",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 423149190185615371,
+                                "name": "Titiits",
+                                "leader": "incas"
+                            },
+                            {
+                                "discord_id": 628947606617456649,
+                                "name": "RaySFX01",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 343457699637362728,
+                                "name": "Connavar",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "cree"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "7wonders",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 236936916321173504,
+                                "name": "We4X",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 273129706126049281,
+                                "name": "Krystanow",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 229175266465939457,
+                                "name": "Priz",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 233706790515245056,
+                                "name": "Ezzekhiel",
+                                "leader": "ecosse"
                             }
                         ]
                     }
@@ -473,7 +749,7 @@
                             {
                                 "discord_id": 355828134685310986,
                                 "name": "SwaP",
-                                "leader": null
+                                "leader": "victoria"
                             },
                             {
                                 "discord_id": 328838240272515073,
@@ -547,7 +823,7 @@
                             {
                                 "discord_id": 392381123474358283,
                                 "name": "tithub",
-                                "leader": null
+                                "leader": "pericles"
                             }
                         ]
                     }
@@ -787,7 +1063,7 @@
                             {
                                 "discord_id": 249887271166279681,
                                 "name": "(CivFR) Omegaia",
-                                "leader": null
+                                "leader": "pericles"
                             },
                             {
                                 "discord_id": 168480406285451266,
@@ -1132,8 +1408,8 @@
                                 "leader": "chandragupta"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
+                                "discord_id": 232529672481538050,
+                                "name": "Manswag",
                                 "leader": "ecosse"
                             },
                             {
@@ -1201,8 +1477,8 @@
                                 "leader": "japon"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
+                                "discord_id": 179170504538587136,
+                                "name": "Baych",
                                 "leader": "mapuches"
                             },
                             {
@@ -1306,9 +1582,9 @@
                                 "leader": "victoria"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
-                                "leader": null
+                                "discord_id": 232529672481538050,
+                                "name": "Manswag",
+                                "leader": "bresil"
                             }
                         ]
                     }
@@ -1346,7 +1622,7 @@
                             {
                                 "discord_id": 220942456689131520,
                                 "name": "makend",
-                                "leader": null
+                                "leader": "inde"
                             },
                             {
                                 "discord_id": 221995666333892609,
@@ -1393,7 +1669,7 @@
                     "phenicie",
                     "norvege",
                     "rome",
-                    null,
+                    "perse",
                     "mali",
                     "russie"
                 ],
@@ -1405,7 +1681,7 @@
                             {
                                 "discord_id": 263312277703360512,
                                 "name": "57Fan",
-                                "leader": null
+                                "leader": "victoria"
                             },
                             {
                                 "discord_id": 152078122248962048,
@@ -1434,8 +1710,8 @@
                                 "leader": "japon"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
+                                "discord_id": 179170504538587136,
+                                "name": "Baych",
                                 "leader": "grece"
                             },
                             {
@@ -1462,7 +1738,7 @@
                     "phenicie",
                     "japon",
                     "rome",
-                    null,
+                    "egypte",
                     "perse",
                     "mali"
                 ],
@@ -1508,9 +1784,9 @@
                                 "leader": "mongolie"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
-                                "leader": "paysbas"
+                                "discord_id": 232529672481538050,
+                                "name": "Manswag",
+                                "leader": "mongolie"
                             },
                             {
                                 "discord_id": 363402144205897728,
@@ -1643,7 +1919,7 @@
                             {
                                 "discord_id": 263312277703360512,
                                 "name": "57Fan",
-                                "leader": null
+                                "leader": "victoria"
                             },
                             {
                                 "discord_id": 352131031136075787,
@@ -1696,7 +1972,7 @@
                             {
                                 "discord_id": 336882991617802240,
                                 "name": "Sirouinouin",
-                                "leader": null
+                                "leader": "teddyroughrider"
                             }
                         ]
                     },
@@ -1805,7 +2081,7 @@
                 "date": "27/06/2020",
                 "bans": [
                     "rome",
-                    null,
+                    "kongo",
                     "cris",
                     "mali",
                     "russie",
@@ -2068,11 +2344,6 @@
                                 "discord_id": 224950930888458240,
                                 "name": "Erwan \"Hash_K\"",
                                 "leader": "coree"
-                            },
-                            {
-                                "discord_id": null,
-                                "name": "None",
-                                "leader": null
                             }
                         ]
                     }
@@ -2135,11 +2406,6 @@
                                 "discord_id": 152078122248962048,
                                 "name": "Hermione",
                                 "leader": "mali"
-                            },
-                            {
-                                "discord_id": null,
-                                "name": "None",
-                                "leader": null
                             }
                         ]
                     }
@@ -2264,7 +2530,7 @@
                             {
                                 "discord_id": 252364473426247680,
                                 "name": "Fun",
-                                "leader": null
+                                "leader": "teddyroughrider"
                             },
                             {
                                 "discord_id": 689504899364421718,
@@ -2296,7 +2562,7 @@
                     "ecosse",
                     "rome",
                     "perse",
-                    null,
+                    "khmer",
                     "egypte"
                 ],
                 "teams": [
@@ -2312,7 +2578,7 @@
                             {
                                 "discord_id": 242115211727732736,
                                 "name": "Twelve",
-                                "leader": null
+                                "leader": "mapuches"
                             },
                             {
                                 "discord_id": 154592303036628994,
@@ -2391,7 +2657,7 @@
                             {
                                 "discord_id": 526714611333070861,
                                 "name": "Aelinor",
-                                "leader": null
+                                "leader": "victoria"
                             }
                         ]
                     },
@@ -2435,7 +2701,7 @@
                     "france",
                     "phenicie",
                     "mapuches",
-                    null
+                    "angleterreeleonore"
                 ],
                 "teams": [
                     {
@@ -2691,9 +2957,9 @@
                                 "leader": "teddyelan"
                             },
                             {
-                                "discord_id": null,
-                                "name": "None",
-                                "leader": null
+                                "discord_id": 526714611333070861,
+                                "name": "Aelinor",
+                                "leader": "japon"
                             }
                         ]
                     }
@@ -2779,7 +3045,7 @@
                     "mapuches",
                     "russie",
                     "phenicie",
-                    null,
+                    "angleterreeleonore",
                     "cris"
                 ],
                 "teams": [
@@ -2874,7 +3140,7 @@
                             {
                                 "discord_id": 141129764688625664,
                                 "name": "KingSporot",
-                                "leader": null
+                                "leader": "inde"
                             }
                         ]
                     },
@@ -2913,7 +3179,7 @@
                 "map": "Mer interieur",
                 "date": "16/06/2020",
                 "bans": [
-                    null,
+                    "phenicie",
                     "japon",
                     "norvege",
                     "mali",
@@ -2982,12 +3248,10 @@
                 "map": "Axe renverse ",
                 "date": "24/06/2020",
                 "bans": [
-                    null,
+                    "phenicie",
                     "japon",
                     "norvege",
-                    null,
-                    null,
-                    null,
+                    "angleterreeleonore",
                     "victoria",
                     "mapuches"
                 ],
@@ -3030,7 +3294,7 @@
                             {
                                 "discord_id": 294158901073543169,
                                 "name": "IAmInappropriate",
-                                "leader": null
+                                "leader": "teddyroughrider"
                             },
                             {
                                 "discord_id": 347383716328243210,
@@ -3068,7 +3332,7 @@
                             {
                                 "discord_id": 235130472257159171,
                                 "name": "dopeldead",
-                                "leader": "teddyelan"
+                                "leader": "teddyroughrider"
                             },
                             {
                                 "discord_id": 285080510366089217,
@@ -3142,7 +3406,7 @@
                             {
                                 "discord_id": 192299111662354433,
                                 "name": "JheyKho LOVE69",
-                                "leader": null
+                                "leader": "bresil"
                             },
                             {
                                 "discord_id": 242115211727732736,
