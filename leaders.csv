@@ -2,7 +2,7 @@
 546968446865244180,angleterreeleonore,Eléonore,Eléonore-En,Angleterre (Aliénor),Aliénor Angleterre,Angleterre
 546968446894866432,franceeleonore,Eléonore,Eléonore-Fr,France (Aliénor),Aliénor France
 340218573299646464,nubie,Amanitoré,Nubie
-312196010447470592,france,Catherine,Catherine-Noire,France,France (Catherine),Cathrine,Reine
+312196010447470592,catherinenoire,Catherine,Catherine-Noire,France,France (Catherine),Cathrine,Reine
 412286752842186752,zoulous,Chaka,Zoulous,Zoulou,Zulu
 412286752141606922,chandragupta,Chandragupta,Chandragupta,Inde,Inde (Chandragupta)
 546968446941003788,suede,Christine,Suède
@@ -11,7 +11,7 @@
 546968446991073281,phenicie,Didon,Phénicie,Dido
 412286752149995520,indonesie,Dyah,Indonésie,Indo;Gitarja
 312196010736746496,allemagne,Frédéric Barberousse,Allemagne,Allemand,Frederic
-312196016654778378,inde,Gandhi,Gandhi,Inde,Inde (Gandhi)
+312196016654778378,gandhi,Gandhi,Gandhi,Inde,Inde (Gandhi)
 412286936024219648,mongolie,Gengis Khan,Mongolie,Mongol
 312196017111957505,sumer,Gilgamesh,Sumer
 312196010917101579,gorgo,Gorgo,Gorgo,Grèce,Grèce (Gorgo)
@@ -47,3 +47,5 @@
 713765785037963314,colombie,Simón Bolívar,Colombie,Simon,Bolivar
 713765998779564053,mayas,Lady Six Sky,Mayas,Maya,Mayan,Lady,Dame,Ciel
 738401650158338088,ethiopie,Menelik II,Éthiopie,Menelik
+738401648774217849,catherinemagnifique,Catherine,Catherine-Magnifique,France,France (Catherine),Cathrine,Magnifique
+738401650691014717,teddyroughrider,Theodore Roosevelt,Theodore-RoughRider,Teddy,USA,Rough,Rider,Amérique
