@@ -1,6 +1,3190 @@
 {
     "histories": {
-        "Mapuche": [], "Didon": [], "Christine": []
+        "Mapuche": [
+            {
+                "id": 710251625171910689,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 81,
+                "map": null,
+                "date": "13/05/2020",
+                "bans": [
+                    "ecosse",
+                    "khmer",
+                    "mapuches",
+                    "scythie",
+                    "perse",
+                    "teddyelan"
+                ],
+                "teams": [
+                    {
+                        "squadron": "babayetu",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "macedoine"
+                            },
+                            {
+                                "discord_id": 95219918596747264,
+                                "name": "Guiguiguy",
+                                "leader": "chandragupta"
+                            },
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": "japon"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "7wonders",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 236936916321173504,
+                                "name": "We4X",
+                                "leader": "egypte"
+                            },
+                            {
+                                "discord_id": 229175266465939457,
+                                "name": "Priz",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 233706790515245056,
+                                "name": "Ezzekhiel",
+                                "leader": "pologne"
+                            },
+                            {
+                                "discord_id": 238369237092007947,
+                                "name": "Sephi",
+                                "leader": "grece"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 710980727784603688,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 62,
+                "map": null,
+                "date": "15/05/2020",
+                "bans": [
+                    "rome",
+                    "egypte",
+                    "coree",
+                    "mali",
+                    "mapuches",
+                    "zoulous"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 225969044182794240,
+                                "name": "DeluxePhilippe",
+                                "leader": "macedoine"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "perse"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 153963235345825802,
+                                "name": "Batoudoo",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 137645419952865280,
+                                "name": "Damori",
+                                "leader": "khmer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 711364066907783288,
+                "victory_type": "Culturelle",
+                "turn": 117,
+                "map": null,
+                "date": "17/05/2020",
+                "bans": [
+                    "rome",
+                    "coree",
+                    "mali",
+                    "mapuches",
+                    "phenicie",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "gorgo"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 225969044182794240,
+                                "name": "DeluxePhilippe",
+                                "leader": "macedoine"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "perse"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 153963235345825802,
+                                "name": "Batoudoo",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 137645419952865280,
+                                "name": "Damori",
+                                "leader": "khmer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 712859009090060299,
+                "victory_type": "Culturelle",
+                "turn": 101,
+                "map": null,
+                "date": "20/05/2020",
+                "bans": [
+                    "mali",
+                    "mapuches",
+                    "rome",
+                    "norvege",
+                    "indonesie",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "babayetu",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 256625625941540875,
+                                "name": "Auguthy",
+                                "leader": "australie"
+                            },
+                            {
+                                "discord_id": 95219918596747264,
+                                "name": "Guiguiguy",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 355828134685310986,
+                                "name": "SwaP",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "japon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 716426092226805810,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 92,
+                "map": null,
+                "date": "30/05/2020",
+                "bans": [
+                    "norvege",
+                    "phenicie",
+                    "mapuches",
+                    "rome",
+                    "scythie",
+                    "indonesie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 168480406285451266,
+                                "name": "Softstyle",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 228420628665991169,
+                                "name": "Oscourt/Thelaps",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "victoria"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "7wonders",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 233706790515245056,
+                                "name": "Ezzekhiel",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 533442699194269707,
+                                "name": "Primpe",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 229175266465939457,
+                                "name": "Priz",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 238369237092007947,
+                                "name": "Sephi",
+                                "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 721854045882679327,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 77,
+                "map": null,
+                "date": "14/06/2020",
+                "bans": [
+                    "mali",
+                    "rome",
+                    "mayas",
+                    "france",
+                    "mapuches",
+                    "cris"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "georgie"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "mongolie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 153963235345825802,
+                                "name": "Batoudoo",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 137645419952865280,
+                                "name": "Damori",
+                                "leader": "japon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 723306181464162415,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 64,
+                "map": null,
+                "date": "18/06/2020",
+                "bans": [
+                    "rome",
+                    "perse",
+                    "mapuches",
+                    "france",
+                    "scythie",
+                    "colombie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "mvm",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 182529997129383937,
+                                "name": "Ulhas",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "georgie"
+                            },
+                            {
+                                "discord_id": 137645419952865280,
+                                "name": "Damori",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "mongolie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "babayetu",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "azteques"
+                            },
+                            {
+                                "discord_id": 355828134685310986,
+                                "name": "SwaP",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "norvege"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 725456346945683477,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 53,
+                "map": null,
+                "date": "24/06/2020",
+                "bans": [
+                    "perse",
+                    "mali",
+                    "russie",
+                    "mapuches",
+                    "phenicie",
+                    "france"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 183282110902173698,
+                                "name": "dISTORIA",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 225969044182794240,
+                                "name": "DeluxePhilippe",
+                                "leader": "japon"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "babayetu",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 256625625941540875,
+                                "name": "Auguthy",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 726188732549693460,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 50,
+                "map": null,
+                "date": "26/06/2020",
+                "bans": [
+                    "mali",
+                    "rome",
+                    "phenicie",
+                    "japon",
+                    "perse",
+                    "russie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 141184075502190593,
+                                "name": "Nerevar",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "7wonders",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 229175266465939457,
+                                "name": "Priz",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 326495167618220033,
+                                "name": "MaxH",
+                                "leader": "colombie"
+                            },
+                            {
+                                "discord_id": 533442699194269707,
+                                "name": "Primpe",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 233706790515245056,
+                                "name": "Ezzekhiel",
+                                "leader": "canada"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 726713590270263346,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 75,
+                "map": null,
+                "date": "28/06/2020",
+                "bans": [
+                    "perse",
+                    "russie",
+                    "mali",
+                    "rome",
+                    "mapuches",
+                    "colombie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 183282110902173698,
+                                "name": "dISTORIA",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 228420628665991169,
+                                "name": "Oscourt/Thelaps",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "scythie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ragnar\u00f6k",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 423149190185615371,
+                                "name": "Titiits",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 628947606617456649,
+                                "name": "RaySFX01",
+                                "leader": "teddyelan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 727630990981333052,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 54,
+                "map": null,
+                "date": "30/06/2020",
+                "bans": [
+                    "perse",
+                    "mali",
+                    "zoulous",
+                    "rome",
+                    "mapuches",
+                    "colombie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 282940923053080579,
+                                "name": "Arketip",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "russie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ulysse",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 183282110902173698,
+                                "name": "dISTORIA",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "mayas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 728039210245685289,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 100,
+                "map": null,
+                "date": "01/07/2020",
+                "bans": [
+                    "perse",
+                    "mali",
+                    "rome",
+                    "mapuches",
+                    "colombie",
+                    "russie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 168480406285451266,
+                                "name": "Softstyle",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 225969044182794240,
+                                "name": "DeluxePhilippe",
+                                "leader": "mongolie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ragnar\u00f6k",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 610089739462377472,
+                                "name": "Larzac",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 343457699637362728,
+                                "name": "Connavar",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "mayas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 729450598055018516,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 71,
+                "map": null,
+                "date": "05/07/2020",
+                "bans": [
+                    "colombie",
+                    "mali",
+                    "mapuches",
+                    "phenicie",
+                    "russie",
+                    "canada"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 141184075502190593,
+                                "name": "Nerevar",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ragnar\u00f6k",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "chine"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 628947606617456649,
+                                "name": "RaySFX01",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 610089739462377472,
+                                "name": "Larzac",
+                                "leader": "victoria"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 732720535804575755,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 79,
+                "map": null,
+                "date": "14/07/2020",
+                "bans": [
+                    "russie",
+                    "mali",
+                    "mongolie",
+                    "france",
+                    "perse",
+                    "mapuches"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 143088067337650176,
+                                "name": "ChucK",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 335129808080207892,
+                                "name": "Milamber",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 141184075502190593,
+                                "name": "Nerevar",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "rome"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 153963235345825802,
+                                "name": "Batoudoo",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 182529997129383937,
+                                "name": "Ulhas",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "mayas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 732787576406278145,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 68,
+                "map": null,
+                "date": "14/07/2020",
+                "bans": [
+                    "russie",
+                    "mali",
+                    "rome",
+                    "colombie",
+                    "phenicie",
+                    "mapuches"
+                ],
+                "teams": [
+                    {
+                        "squadron": "ulysse",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 249887271166279681,
+                                "name": "(CivFR) Omegaia",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 181879507756515328,
+                                "name": "Lege",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 183282110902173698,
+                                "name": "dISTORIA",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 549254188522012690,
+                                "name": "Abel_brimi",
+                                "leader": "japon"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "ragnar\u00f6k",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 112947515103383552,
+                                "name": "Yelli",
+                                "leader": "chine"
+                            },
+                            {
+                                "discord_id": 219501215183011840,
+                                "name": "Tamlym",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 423149190185615371,
+                                "name": "Titiits",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 363333552286334996,
+                                "name": "tuiguillunt",
+                                "leader": "allemagne"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 733113467518713876,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 129,
+                "map": null,
+                "date": "15/07/2020",
+                "bans": [
+                    "france",
+                    "russie",
+                    "perse",
+                    "mali",
+                    "rome",
+                    "mapuches"
+                ],
+                "teams": [
+                    {
+                        "squadron": "pyramid",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 143088067337650176,
+                                "name": "ChucK",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 111335315238641664,
+                                "name": "(CivFR) Malm",
+                                "leader": "colombie"
+                            },
+                            {
+                                "discord_id": 298927607183835136,
+                                "name": "Yaourt",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 267990341418745856,
+                                "name": "Hazaggi",
+                                "leader": "macedoine"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "mvm",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 233664918056992768,
+                                "name": "Yllark",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 274229647963586571,
+                                "name": "Shino",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 182529997129383937,
+                                "name": "Ulhas",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 436574185716973579,
+                                "name": "Spriggan",
+                                "leader": "zoulous"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Didon": [
+            {
+                "id": 709916240734584882,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 104,
+                "map": null,
+                "date": "12/05/2020",
+                "bans": [
+                    "kongo",
+                    "russie",
+                    "mapuches",
+                    "rome",
+                    "egypte",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "fun",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 197438631122698241,
+                                "name": "sausau",
+                                "leader": "chandragupta"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": "ecosse"
+                            },
+                            {
+                                "discord_id": 363402144205897728,
+                                "name": "Aethelvard",
+                                "leader": "hongrie"
+                            },
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "mongolie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "2noob2win",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 224925322129309698,
+                                "name": "Stupe",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 352131031136075787,
+                                "name": "Souc",
+                                "leader": "mali"
+                            },
+                            {
+                                "discord_id": 210401576802713600,
+                                "name": "Vilain Petit Canard",
+                                "leader": "teddyelan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 711012434126700585,
+                "victory_type": "Diplomatique",
+                "turn": 117,
+                "map": null,
+                "date": "15/05/2020",
+                "bans": [
+                    "russie",
+                    "khmer",
+                    "mongolie",
+                    "pologne",
+                    "rome",
+                    "mali"
+                ],
+                "teams": [
+                    {
+                        "squadron": "baychboys",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 189049076568948736,
+                                "name": "[Coach]Joueurs 4 Ma\u00eetre",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 173728460907347968,
+                                "name": "Ronto",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 336882991617802240,
+                                "name": "Sirouinouin",
+                                "leader": "perse"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "la7\u00e8mecompagnie",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 347307111916503040,
+                                "name": "Valeb",
+                                "leader": "ecosse"
+                            },
+                            {
+                                "discord_id": 194090482484117505,
+                                "name": "sebdare",
+                                "leader": "egypte"
+                            },
+                            {
+                                "discord_id": 350347381503557632,
+                                "name": "Le Savant fou \ud83d\udc19 \ud83c\udfa2 \u2728",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 247843549989568512,
+                                "name": "Elten",
+                                "leader": "indonesie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 712429698390556683,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 67,
+                "map": null,
+                "date": "19/05/2020",
+                "bans": [
+                    "egypte",
+                    "phenicie",
+                    "norvege",
+                    "mapuches",
+                    "japon",
+                    "indonesie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "perlimparpaing",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 280434223259844609,
+                                "name": "snyrush",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 518868970921656368,
+                                "name": "Kisame",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 170175103118737409,
+                                "name": "Xiffy",
+                                "leader": "angleterreeleonore"
+                            },
+                            {
+                                "discord_id": 167525317114724352,
+                                "name": "Efy",
+                                "leader": "russie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "fun",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 275589868346802176,
+                                "name": "Kend0",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 363402144205897728,
+                                "name": "Aethelvard",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 712780942405664840,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 49,
+                "map": null,
+                "date": "20/05/2020",
+                "bans": [
+                    "mapuches",
+                    "perse",
+                    "france",
+                    "scythie",
+                    "mali",
+                    "russie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "perlimparpaing",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 167525317114724352,
+                                "name": "Efy",
+                                "leader": "coree"
+                            },
+                            {
+                                "discord_id": 518868970921656368,
+                                "name": "Kisame",
+                                "leader": "suede"
+                            },
+                            {
+                                "discord_id": 220942456689131520,
+                                "name": "makend",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 221995666333892609,
+                                "name": "Phyrsos",
+                                "leader": "egypte"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "officiumcoloniarum",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 351742558356897792,
+                                "name": "MColokoh",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 264014327009378304,
+                                "name": "Tartiflette",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 174195455763283970,
+                                "name": "Zilouane",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 526884856530075679,
+                                "name": "Esteban",
+                                "leader": "japon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 716396517514281021,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 61,
+                "map": null,
+                "date": "30/05/2020",
+                "bans": [
+                    "phenicie",
+                    "norvege",
+                    "rome",
+                    null,
+                    "mali",
+                    "russie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "2noob2win",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 263312277703360512,
+                                "name": "57Fan",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 152078122248962048,
+                                "name": "Hermione",
+                                "leader": "angleterreeleonore"
+                            },
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 210401576802713600,
+                                "name": "Vilain Petit Canard",
+                                "leader": "egypte"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "baychboys",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 173728460907347968,
+                                "name": "Ronto",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 256417703626145802,
+                                "name": "[Eleve] Hyogo",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 241606891917148161,
+                                "name": "Feanor",
+                                "leader": "mapuches"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718601229902544917,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 83,
+                "map": null,
+                "date": "05/06/2020",
+                "bans": [
+                    "phenicie",
+                    "japon",
+                    "rome",
+                    null,
+                    "perse",
+                    "mali"
+                ],
+                "teams": [
+                    {
+                        "squadron": "officiumcoloniarum",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 463416665510641664,
+                                "name": "Le_Yaponchik",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 264014327009378304,
+                                "name": "Tartiflette",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 359009150702977034,
+                                "name": "LeBarde",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 351742558356897792,
+                                "name": "MColokoh",
+                                "leader": "allemagne"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "fun",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 429544270878474240,
+                                "name": "Xena",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": "paysbas"
+                            },
+                            {
+                                "discord_id": 363402144205897728,
+                                "name": "Aethelvard",
+                                "leader": "mayas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718988987074609155,
+                "victory_type": "Diplomatique",
+                "turn": 112,
+                "map": null,
+                "date": "06/06/2020",
+                "bans": [
+                    "mapuches",
+                    "perse",
+                    "rome",
+                    "egypte",
+                    "phenicie",
+                    "mali"
+                ],
+                "teams": [
+                    {
+                        "squadron": "perlimparpaing",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 221995666333892609,
+                                "name": "Phyrsos",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 170175103118737409,
+                                "name": "Xiffy",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 280434223259844609,
+                                "name": "snyrush",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 198133913183453186,
+                                "name": "Tidube",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "baychboys",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 249190964479000576,
+                                "name": "Gathering Hope",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 189049076568948736,
+                                "name": "[Coach]Joueurs 4 Ma\u00eetre",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 256417703626145802,
+                                "name": "[Eleve] Hyogo",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 173728460907347968,
+                                "name": "Ronto",
+                                "leader": "georgie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 719662316060278936,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 68,
+                "map": null,
+                "date": "08/06/2020",
+                "bans": [
+                    "rome",
+                    "norvege",
+                    "mapuches",
+                    "mayas",
+                    "mali",
+                    "phenicie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "perlimparpaing",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 221995666333892609,
+                                "name": "Phyrsos",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 167525317114724352,
+                                "name": "Efy",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 280434223259844609,
+                                "name": "snyrush",
+                                "leader": "egypte"
+                            },
+                            {
+                                "discord_id": 198133913183453186,
+                                "name": "Tidube",
+                                "leader": "zoulous"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "2noob2win",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 210401576802713600,
+                                "name": "Vilain Petit Canard",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 263312277703360512,
+                                "name": "57Fan",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 352131031136075787,
+                                "name": "Souc",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 721557037183401995,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 130,
+                "map": null,
+                "date": "13/06/2020",
+                "bans": [
+                    "mayas",
+                    "mali",
+                    "mapuches",
+                    "rome",
+                    "cris",
+                    "russie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "baychboys",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 256417703626145802,
+                                "name": "[Eleve] Hyogo",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 189049076568948736,
+                                "name": "[Coach]Joueurs 4 Ma\u00eetre",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 272887794165350401,
+                                "name": "romrom",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 336882991617802240,
+                                "name": "Sirouinouin",
+                                "leader": null
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "officiumcoloniarum",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 264112670439899137,
+                                "name": "Aytheak",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 463416665510641664,
+                                "name": "Le_Yaponchik",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 359009150702977034,
+                                "name": "LeBarde",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 264014327009378304,
+                                "name": "Tartiflette",
+                                "leader": "phenicie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 725871775447122031,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 87,
+                "map": "Tilted Axis",
+                "date": "25/06/2020",
+                "bans": [
+                    "colombie",
+                    "rome",
+                    "mapuches",
+                    "france",
+                    "scythie",
+                    "japon"
+                ],
+                "teams": [
+                    {
+                        "squadron": "2noob2win",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 224925322129309698,
+                                "name": "Stupe",
+                                "leader": "zoulous"
+                            },
+                            {
+                                "discord_id": 152078122248962048,
+                                "name": "Hermione",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 210401576802713600,
+                                "name": "Vilain Petit Canard",
+                                "leader": "russie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "officiumcoloniarum",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 463416665510641664,
+                                "name": "Le_Yaponchik",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 264112670439899137,
+                                "name": "Aytheak",
+                                "leader": "macedoine"
+                            },
+                            {
+                                "discord_id": 351742558356897792,
+                                "name": "MColokoh",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 174195455763283970,
+                                "name": "Zilouane",
+                                "leader": "norvege"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 726571472998367323,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 72,
+                "map": "Axe Invers\u00e9",
+                "date": "27/06/2020",
+                "bans": [
+                    "rome",
+                    null,
+                    "cris",
+                    "mali",
+                    "russie",
+                    "colombie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "baychboys",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 336882991617802240,
+                                "name": "Sirouinouin",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 241606891917148161,
+                                "name": "Feanor",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 272887794165350401,
+                                "name": "romrom",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 189049076568948736,
+                                "name": "[Coach]Joueurs 4 Ma\u00eetre",
+                                "leader": "khmer"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "fun",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "bresil"
+                            },
+                            {
+                                "discord_id": 160091839024594944,
+                                "name": "Maiiky",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 429544270878474240,
+                                "name": "Xena",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 197438631122698241,
+                                "name": "sausau",
+                                "leader": "japon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 730543233804927146,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 72,
+                "map": null,
+                "date": "08/07/2020",
+                "bans": [
+                    "rome",
+                    "colombie",
+                    "japon",
+                    "mapuches",
+                    "mayas",
+                    "phenicie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "babayetu",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 249238067880263680,
+                                "name": "Maho",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 328838240272515073,
+                                "name": "Foxhounds",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": "russie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "2noob2win",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 210401576802713600,
+                                "name": "Vilain Petit Canard",
+                                "leader": "egypte"
+                            },
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 224925322129309698,
+                                "name": "Stupe",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 152078122248962048,
+                                "name": "Hermione",
+                                "leader": "mali"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 731324243320766514,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 112,
+                "map": "Pang\u00e9e",
+                "date": "10/07/2020",
+                "bans": [
+                    "mongolie",
+                    "allemagne",
+                    "colombie",
+                    "japon",
+                    "mali",
+                    "zoulous"
+                ],
+                "teams": [
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 305681919914278912,
+                                "name": "Shin",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 163668460985909253,
+                                "name": "Quokka",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 526714611333070861,
+                                "name": "Aelinor",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "coree"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "fun",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 429544270878474240,
+                                "name": "Xena",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 160091839024594944,
+                                "name": "Maiiky",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 197438631122698241,
+                                "name": "sausau",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "kongo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 733510238791008298,
+                "victory_type": "Culturelle",
+                "turn": 115,
+                "map": "Pang\u00e9e",
+                "date": "16/07/2020",
+                "bans": [
+                    "mali",
+                    "mongolie",
+                    "allemagne",
+                    "colombie",
+                    "phenicie",
+                    "zoulous"
+                ],
+                "teams": [
+                    {
+                        "squadron": "fun",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 275589868346802176,
+                                "name": "Kend0",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 160091839024594944,
+                                "name": "Maiiky",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 197438631122698241,
+                                "name": "sausau",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 146222256325001216,
+                                "name": "coloo",
+                                "leader": "rome"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 526714611333070861,
+                                "name": "Aelinor",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 163668460985909253,
+                                "name": "Quokka",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 179606657217724416,
+                                "name": "Riggy",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "coree"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 736226041605128255,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": null,
+                "map": null,
+                "date": "24/07/2020",
+                "bans": [],
+                "teams": [
+                    {
+                        "squadron": "babayetu",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 249238067880263680,
+                                "name": "Maho",
+                                "leader": "hongrie"
+                            },
+                            {
+                                "discord_id": 303351311695478785,
+                                "name": "Solowee",
+                                "leader": "macedoine"
+                            },
+                            {
+                                "discord_id": 256625625941540875,
+                                "name": "Auguthy",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 392381123474358283,
+                                "name": "tithub",
+                                "leader": "japon"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "2noob2win",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 386558749827006466,
+                                "name": "Tiko Pasta",
+                                "leader": "chine"
+                            },
+                            {
+                                "discord_id": 338331154346278914,
+                                "name": "Duacir",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 263312277703360512,
+                                "name": "57Fan",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 152078122248962048,
+                                "name": "Hermione",
+                                "leader": "mali"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Christine": [
+            {
+                "id": 709531852645466192,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 76,
+                "map": null,
+                "date": "11/05/2020",
+                "bans": [
+                    "france",
+                    "mapuches",
+                    "mali",
+                    "japon",
+                    "mongolie",
+                    "teddyelan"
+                ],
+                "teams": [
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 179606657217724416,
+                                "name": "Riggy",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 163668460985909253,
+                                "name": "Quokka",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 305681919914278912,
+                                "name": "Shin",
+                                "leader": "ecosse"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "afondlesmalons",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 336148323151118336,
+                                "name": "Zorah",
+                                "leader": "incas"
+                            },
+                            {
+                                "discord_id": 144907869563781120,
+                                "name": "Lo0P",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 347383716328243210,
+                                "name": "Airfive / Paulochon",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 131826827932073984,
+                                "name": "Nexpreso",
+                                "leader": "egypte"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 709908709773672508,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 80,
+                "map": null,
+                "date": "12/05/2020",
+                "bans": [
+                    "egypte",
+                    "ecosse",
+                    "rome",
+                    "russie",
+                    "mapuches",
+                    "mali"
+                ],
+                "teams": [
+                    {
+                        "squadron": "tribudesbarbaresd\u00e9termin\u00e9s",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 279005828797956098,
+                                "name": "Pyrocultiste",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 146372249119621131,
+                                "name": "Oranssi_",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 205009404976693248,
+                                "name": "Valdoh",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 220990634100523009,
+                                "name": "Bouynours",
+                                "leader": "inde"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "haremd'aren",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 252364473426247680,
+                                "name": "Fun",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 689504899364421718,
+                                "name": "Wall-E",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 235130472257159171,
+                                "name": "dopeldead",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 215222176293322754,
+                                "name": "Aren",
+                                "leader": "khmer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 710637423230582816,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 95,
+                "map": null,
+                "date": "14/05/2020",
+                "bans": [
+                    "mali",
+                    "ecosse",
+                    "rome",
+                    "perse",
+                    null,
+                    "egypte"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lestigressesenchaleur",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 141129764688625664,
+                                "name": "KingSporot",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 242115211727732736,
+                                "name": "Twelve",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 154592303036628994,
+                                "name": "DJ SNORKYO",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 192299111662354433,
+                                "name": "JheyKho LOVE69",
+                                "leader": "ottomans"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "lesproctologues",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 233223801641500673,
+                                "name": "vistay",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 144887626594254848,
+                                "name": "Konson",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 209408896299696128,
+                                "name": "KitoSkel",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 439149468441509908,
+                                "name": "Astikos",
+                                "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 712099590245187714,
+                "victory_type": "Culturelle",
+                "turn": 105,
+                "map": null,
+                "date": "18/05/2020",
+                "bans": [
+                    "rome",
+                    "egypte",
+                    "norvege",
+                    "phenicie",
+                    "allemagne",
+                    "ecosse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 305681919914278912,
+                                "name": "Shin",
+                                "leader": "indonesie"
+                            },
+                            {
+                                "discord_id": 218301466685865994,
+                                "name": "Dubarjo",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 526714611333070861,
+                                "name": "Aelinor",
+                                "leader": null
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "lesproctologues",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 439149468441509908,
+                                "name": "Astikos",
+                                "leader": "mali"
+                            },
+                            {
+                                "discord_id": 350366365187833859,
+                                "name": "Caswallawn",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 233223801641500673,
+                                "name": "vistay",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 144887626594254848,
+                                "name": "Konson",
+                                "leader": "japon"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 713791514769227786,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 66,
+                "map": null,
+                "date": "23/05/2020",
+                "bans": [
+                    "rome",
+                    "indonesie",
+                    "france",
+                    "phenicie",
+                    "mapuches",
+                    null
+                ],
+                "teams": [
+                    {
+                        "squadron": "lestigressesenchaleur",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 317013413505138688,
+                                "name": "klerlan",
+                                "leader": "azteques"
+                            },
+                            {
+                                "discord_id": 202166200065589249,
+                                "name": "koco",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 154592303036628994,
+                                "name": "DJ SNORKYO",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 190229732468588546,
+                                "name": "Zarline",
+                                "leader": "victoria"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "haremd'aren",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 285080510366089217,
+                                "name": "NeOz",
+                                "leader": "suede"
+                            },
+                            {
+                                "discord_id": 252364473426247680,
+                                "name": "Fun",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 215222176293322754,
+                                "name": "Aren",
+                                "leader": "australie"
+                            },
+                            {
+                                "discord_id": 689504899364421718,
+                                "name": "Wall-E",
+                                "leader": "perse"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 715352687595487272,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 102,
+                "map": null,
+                "date": "27/05/2020",
+                "bans": [
+                    "france",
+                    "mapuches",
+                    "scythie",
+                    "phenicie",
+                    "rome",
+                    "angleterreeleonore"
+                ],
+                "teams": [
+                    {
+                        "squadron": "tribudesbarbaresd\u00e9termin\u00e9s",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 202965112481382400,
+                                "name": "Kontendra",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 205009404976693248,
+                                "name": "Valdoh",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 146372249119621131,
+                                "name": "Oranssi_",
+                                "leader": "azteques"
+                            },
+                            {
+                                "discord_id": 220990634100523009,
+                                "name": "Bouynours",
+                                "leader": "russie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "afondlesmalons",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 347383716328243210,
+                                "name": "Airfive / Paulochon",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 131826827932073984,
+                                "name": "Nexpreso",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 294158901073543169,
+                                "name": "IAmInappropriate",
+                                "leader": "espagne"
+                            },
+                            {
+                                "discord_id": 595317841235017728,
+                                "name": "Tirem",
+                                "leader": "indonesie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718408466154389544,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 99,
+                "map": null,
+                "date": "05/06/2020",
+                "bans": [
+                    "egypte",
+                    "rome",
+                    "mali",
+                    "japon",
+                    "perse",
+                    "phenicie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lesproctologues",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 233223801641500673,
+                                "name": "vistay",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 144887626594254848,
+                                "name": "Konson",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 439149468441509908,
+                                "name": "Astikos",
+                                "leader": "georgie"
+                            },
+                            {
+                                "discord_id": 209408896299696128,
+                                "name": "KitoSkel",
+                                "leader": "coree"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "tribudesbarbaresd\u00e9termin\u00e9s",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 220990634100523009,
+                                "name": "Bouynours",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 205009404976693248,
+                                "name": "Valdoh",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 588744009699033090,
+                                "name": "Xana",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 279005828797956098,
+                                "name": "Pyrocultiste",
+                                "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 718900864848232597,
+                "victory_type": "Culturelle",
+                "turn": 125,
+                "map": null,
+                "date": "06/06/2020",
+                "bans": [
+                    "rome",
+                    "egypte",
+                    "allemagne",
+                    "mapuches",
+                    "mali",
+                    "perse"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lestigressesenchaleur",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 242115211727732736,
+                                "name": "Twelve",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 317013413505138688,
+                                "name": "klerlan",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 190229732468588546,
+                                "name": "Zarline",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 202166200065589249,
+                                "name": "koco",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 179606657217724416,
+                                "name": "Riggy",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 218301466685865994,
+                                "name": "Dubarjo",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": null,
+                                "name": "None",
+                                "leader": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 719310719040094329,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 73,
+                "map": null,
+                "date": "07/06/2020",
+                "bans": [
+                    "canada",
+                    "russie",
+                    "egypte",
+                    "rome",
+                    "france",
+                    "mali"
+                ],
+                "teams": [
+                    {
+                        "squadron": "afondlesmalons",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 595317841235017728,
+                                "name": "Tirem",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 131826827932073984,
+                                "name": "Nexpreso",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 347383716328243210,
+                                "name": "Airfive / Paulochon",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 336148323151118336,
+                                "name": "Zorah",
+                                "leader": "japon"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "haremd'aren",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 689504899364421718,
+                                "name": "Wall-E",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 215222176293322754,
+                                "name": "Aren",
+                                "leader": "grece"
+                            },
+                            {
+                                "discord_id": 235130472257159171,
+                                "name": "dopeldead",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 285080510366089217,
+                                "name": "NeOz",
+                                "leader": "suede"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 721444038426886241,
+                "victory_type": "Culturelle",
+                "turn": 122,
+                "map": "Mer Int\u00e9rieure",
+                "date": "13/06/2020",
+                "bans": [
+                    "rome",
+                    "mapuches",
+                    "russie",
+                    "phenicie",
+                    null,
+                    "cris"
+                ],
+                "teams": [
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 179606657217724416,
+                                "name": "Riggy",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 163668460985909253,
+                                "name": "Quokka",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 305681919914278912,
+                                "name": "Shin",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "tribudesbarbaresd\u00e9termin\u00e9s",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 220990634100523009,
+                                "name": "Bouynours",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 202965112481382400,
+                                "name": "Kontendra",
+                                "leader": "coree"
+                            },
+                            {
+                                "discord_id": 279005828797956098,
+                                "name": "Pyrocultiste",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 146372249119621131,
+                                "name": "Oranssi_",
+                                "leader": "victoria"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 721855442703351919,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 57,
+                "map": "Mer int\u00e9rieur",
+                "date": "14/06/2020",
+                "bans": [
+                    "russie",
+                    "rome",
+                    "france",
+                    "cris",
+                    "mali",
+                    "phenicie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lestigressesenchaleur",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 242115211727732736,
+                                "name": "Twelve",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 154592303036628994,
+                                "name": "DJ SNORKYO",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 192299111662354433,
+                                "name": "JheyKho LOVE69",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 141129764688625664,
+                                "name": "KingSporot",
+                                "leader": null
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "afondlesmalons",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 223925191095353354,
+                                "name": "asppirhyne",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 131826827932073984,
+                                "name": "Nexpreso",
+                                "leader": "mayas"
+                            },
+                            {
+                                "discord_id": 595317841235017728,
+                                "name": "Tirem",
+                                "leader": "chandragupta"
+                            },
+                            {
+                                "discord_id": 347383716328243210,
+                                "name": "Airfive / Paulochon",
+                                "leader": "mapuches"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 722603889085382687,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 113,
+                "map": "Mer interieur",
+                "date": "16/06/2020",
+                "bans": [
+                    null,
+                    "japon",
+                    "norvege",
+                    "mali",
+                    "russie",
+                    "mayas"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lesproctologues",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 144887626594254848,
+                                "name": "Konson",
+                                "leader": "canada"
+                            },
+                            {
+                                "discord_id": 233223801641500673,
+                                "name": "vistay",
+                                "leader": "cris"
+                            },
+                            {
+                                "discord_id": 439149468441509908,
+                                "name": "Astikos",
+                                "leader": "inde"
+                            },
+                            {
+                                "discord_id": 256542735333326851,
+                                "name": "Kholga",
+                                "leader": "rome"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "haremd'aren",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 285080510366089217,
+                                "name": "NeOz",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 215222176293322754,
+                                "name": "Aren",
+                                "leader": "indonesie"
+                            },
+                            {
+                                "discord_id": 147061813626929152,
+                                "name": "Lucas \"IceLuc\" D",
+                                "leader": "victoria"
+                            },
+                            {
+                                "discord_id": 235130472257159171,
+                                "name": "dopeldead",
+                                "leader": "france"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 725464353117306972,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 55,
+                "map": "Axe renverse ",
+                "date": "24/06/2020",
+                "bans": [
+                    null,
+                    "japon",
+                    "norvege",
+                    null,
+                    null,
+                    null,
+                    "victoria",
+                    "mapuches"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lesproctologues",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 144887626594254848,
+                                "name": "Konson",
+                                "leader": "rome"
+                            },
+                            {
+                                "discord_id": 256542735333326851,
+                                "name": "Kholga",
+                                "leader": "perse"
+                            },
+                            {
+                                "discord_id": 439149468441509908,
+                                "name": "Astikos",
+                                "leader": "mali"
+                            },
+                            {
+                                "discord_id": 233223801641500673,
+                                "name": "vistay",
+                                "leader": "france"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "afondlesmalons",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 223925191095353354,
+                                "name": "asppirhyne",
+                                "leader": "espagne"
+                            },
+                            {
+                                "discord_id": 294158901073543169,
+                                "name": "IAmInappropriate",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 347383716328243210,
+                                "name": "Airfive / Paulochon",
+                                "leader": "colombie"
+                            },
+                            {
+                                "discord_id": 595317841235017728,
+                                "name": "Tirem",
+                                "leader": "khmer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 725838708389183619,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 80,
+                "map": "Axe Invers\u00e9",
+                "date": "25/06/2020",
+                "bans": [
+                    "phenicie",
+                    "mali",
+                    "france",
+                    "perse",
+                    "rome",
+                    "colombie"
+                ],
+                "teams": [
+                    {
+                        "squadron": "haremd'aren",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 235130472257159171,
+                                "name": "dopeldead",
+                                "leader": "teddyelan"
+                            },
+                            {
+                                "discord_id": 285080510366089217,
+                                "name": "NeOz",
+                                "leader": "mongolie"
+                            },
+                            {
+                                "discord_id": 274921968065708033,
+                                "name": "Yuntoris",
+                                "leader": "japon"
+                            },
+                            {
+                                "discord_id": 689504899364421718,
+                                "name": "Wall-E",
+                                "leader": "scythie"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "eur\u00eaka!",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 224950930888458240,
+                                "name": "Erwan \"Hash_K\"",
+                                "leader": "allemagne"
+                            },
+                            {
+                                "discord_id": 163668460985909253,
+                                "name": "Quokka",
+                                "leader": "russie"
+                            },
+                            {
+                                "discord_id": 305681919914278912,
+                                "name": "Shin",
+                                "leader": "mapuches"
+                            },
+                            {
+                                "discord_id": 147061813626929152,
+                                "name": "Lucas \"IceLuc\" D",
+                                "leader": "norvege"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 726170999841751151,
+                "victory_type": "Conc\u00e9d\u00e9e",
+                "turn": 22,
+                "map": "Axe Invers\u00e9",
+                "date": "26/06/2020",
+                "bans": [
+                    "rome",
+                    "perse",
+                    "mali",
+                    "colombie",
+                    "japon",
+                    "victoria"
+                ],
+                "teams": [
+                    {
+                        "squadron": "lestigressesenchaleur",
+                        "win": false,
+                        "players": [
+                            {
+                                "discord_id": 317013413505138688,
+                                "name": "klerlan",
+                                "leader": "phenicie"
+                            },
+                            {
+                                "discord_id": 192299111662354433,
+                                "name": "JheyKho LOVE69",
+                                "leader": null
+                            },
+                            {
+                                "discord_id": 242115211727732736,
+                                "name": "Twelve",
+                                "leader": "scythie"
+                            },
+                            {
+                                "discord_id": 154592303036628994,
+                                "name": "DJ SNORKYO",
+                                "leader": "zoulous"
+                            }
+                        ]
+                    },
+                    {
+                        "squadron": "tribudesbarbaresd\u00e9termin\u00e9s",
+                        "win": true,
+                        "players": [
+                            {
+                                "discord_id": 146372249119621131,
+                                "name": "Oranssi_",
+                                "leader": "norvege"
+                            },
+                            {
+                                "discord_id": 205009404976693248,
+                                "name": "Valdoh",
+                                "leader": "france"
+                            },
+                            {
+                                "discord_id": 202965112481382400,
+                                "name": "Kontendra",
+                                "leader": "khmer"
+                            },
+                            {
+                                "discord_id": 279005828797956098,
+                                "name": "Pyrocultiste",
+                                "leader": "mapuches"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     "ignore_ids": []
 }

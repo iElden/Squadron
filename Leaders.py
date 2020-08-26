@@ -1,6 +1,9 @@
+import logging
 import csv
 import re
 from Global import Global
+
+logger = logging.getLogger("Leaders")
 
 NON_WORD = re.compile(r"[^\wÀ-ú]+")
 
@@ -16,14 +19,21 @@ class Leaders:
             yield i
 
     def _get_leader_named(self, name):
-        for leader in self:
-            if leader == name:
-                return leader
+        result = [leader for leader in self if leader == name]
+        if len(result) > 1:
+            logger.warning(f"{len(result)} results found for name \"{name}\"")
+            return None
+        if result:
+            return result[0]
+        result = [leader for leader in self if leader.is_in(name)]
+        if len(result) == 1:
+            return result[0]
         return None
 
     def get_leader_named(self, name):
         if name is None:
             return None
+        name = name.lower()
         leader = self._get_leader_named(name)
         if leader:
             return leader
@@ -49,6 +59,13 @@ class Leader:
         if isinstance(other, str):
             return other.lower() in self.all_name
         return self.uuname == other.uuname
+
+    def is_in(self, other : str) -> bool:
+        other = other.lower()
+        for i in self.all_name:
+            if other in i:
+                return True
+        return False
 
 def load_leaders():
     with open("leaders.csv", "r") as fd:
