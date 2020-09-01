@@ -15,9 +15,7 @@ class OldSeason:
         with open(json_file) as fd:
             js = json.load(fd)
         squadrons = [OldSquadron(s) for s in js['squadrons']]
-        mapuche_history = GlobalHistory.from_json(js['matchs']['mapuche'], Division.MAPUCHE, squadrons)
-        didons_hisory = GlobalHistory.from_json(js['matchs']['didon'], Division.DIDON, squadrons)
-        return cls(squadrons, [mapuche_history, didons_hisory])
+        return cls(squadrons, [GlobalHistory.from_json(v, Division(k), squadrons) for k, v in js['matchs'].items()])
 
     def get_history_for(self, squadron):
         return sum([[match for match in history if squadron == match.team_1.squadron or squadron == match.team_2.squadron] for history in self.histories], [])

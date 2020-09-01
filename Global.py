@@ -11,7 +11,7 @@ class Constant:
                     708475858486034474, 708475860348567612, 682920185547587594]
     CHRISTINE_SQUADS = [708475861292286024, 708475865314361394, 708475865494978612,
                         708475021621723137, 708475864110596107, 708475864115052635]
-    CURRENT_SEASON = "4"
+    CURRENT_SEASON = "5"
 
 class Global:
     squadrons = None
@@ -72,7 +72,8 @@ class Global:
             cls.histories = [sh + lh for sh, lh in zip(cls.histories, loaded_histories)]
             cls.save_histories_to_json()
         cls.mapuche_history, cls.didon_history, cls.christine_history = cls.histories
-        cls.old_season = {"3": OldSeason.OldSeason.from_json("save_squadron_season3.json")}
+        cls.old_season = {"3": OldSeason.OldSeason.from_json("save_squadron_season3.json"),
+                          "4": OldSeason.OldSeason.from_json("save_squadron_season4.json")}
         cls.reload_full_history()
         cls.update_players_stats()
 
@@ -110,6 +111,8 @@ class Global:
             for match in history:
                 for igteam in match.team_1, match.team_2:
                     for igplayer in igteam:
+                        if not igteam.squadron:  # Anti-fail : should not be triggered
+                            continue
                         player = igteam.squadron.find_player(igplayer)
                         if player is None:
                             continue

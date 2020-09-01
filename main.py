@@ -2,6 +2,7 @@ from flask import Flask, abort, render_template, send_from_directory, redirect
 from threading import Thread
 import logging
 import asyncio
+import json
 
 from DiscordClient import DiscordClient
 from Global import Global, Constant
@@ -80,8 +81,7 @@ def stats_route():
 """
 @app.route('/dump')
 def tmp_dump():
-    oldSeason = Global.old_season['3']
-    for globalHistory in oldSeason.histories:
+    for globalHistory in Global.histories:
         d = {}
         for leader in Global.leaders:
             d[leader.uuname] = {"play": 0, "win": 0, "ban": 0}
@@ -98,13 +98,19 @@ def tmp_dump():
                 if not ban:
                     continue
                 d[ban.uuname]["ban"] += 1
-        with open(f"tmp_{globalHistory.division.value}_3.csv", 'w') as fd:
+        with open(f"tmp_{globalHistory.division.value}_4.csv", 'w') as fd:
             t = 'total_match,' + str(i)
             t += 'leader,play,ban,win\n' + '\n'.join('{0},{1[play]},{1[ban]},{1[win]}'.format(k, v) for k, v in d.items())
             fd.write(t)
 
     return "done"
 """
+
+@app.route('/get_current_season_json')
+def get_current_season_json():
+    return json.dumps({"squadrons": [i.to_json() for i in Global.squadrons],
+                       "matchs": {globalHistory.division.value : [i.to_json() for i in globalHistory.matchs] for globalHistory in Global.histories}},
+                      indent=4)
 
 @app.route('/history')
 def history_route():
